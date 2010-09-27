@@ -47,6 +47,12 @@
     </bean>
     <!--PersonNameDao-END-->
 
+    <!--BillingDao-START-->
+    <bean id="billingDao" class="com.management.college.dao.hibernate.BillingDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--BillingDao-END-->
+
     <!-- Add new DAOs here -->
 
     <!--StudentManager-START-->
@@ -92,6 +98,12 @@
         <constructor-arg ref="personNameDao"/>
     </bean>
     <!--PersonNameManager-END-->
+
+    <!--BillingManager-START-->
+    <bean id="billingManager" class="com.management.college.service.impl.BillingManagerImpl">
+        <constructor-arg ref="billingDao"/>
+    </bean>
+    <!--BillingManager-END-->
 
     <!-- Add new Managers here -->
 </beans>

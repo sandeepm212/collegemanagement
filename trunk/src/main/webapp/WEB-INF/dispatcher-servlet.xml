@@ -150,6 +150,18 @@
     </bean>
     <!--PersonName-END-->
 
+    <!--Billing-START-->
+    <bean id="billingController" class="com.management.college.webapp.controller.BillingController">
+        <property name="billingManager" ref="billingManager"/>
+    </bean>
+
+    <bean id="billingFormController" class="com.management.college.webapp.controller.BillingFormController">
+        <property name="validator" ref="beanValidator"/>
+        <property name="successView" value="redirect:billings.html"/>
+        <property name="billingManager" ref="billingManager"/>
+    </bean>
+    <!--Billing-END-->
+
     <!-- Add additional controller beans here -->
 
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">

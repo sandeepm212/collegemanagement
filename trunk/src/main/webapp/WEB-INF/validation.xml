@@ -190,6 +190,34 @@
             </field>
         </form>
         <!--PersonName-END-->
+        <!--Billing-START-->
+        <form name="billing">
+            <field property="createdOn" depends="required">
+                <arg0 key="billing.createdOn"/>
+            </field>
+            <field property="updatedOn" depends="required">
+                <arg0 key="billing.updatedOn"/>
+            </field>
+            <field property="accountNumber" depends="required">
+                <arg0 key="billing.accountNumber"/>
+            </field>
+            <field property="admissionNumber" depends="required">
+                <arg0 key="billing.admissionNumber"/>
+            </field>
+            <field property="bankId" depends="required">
+                <arg0 key="billing.bankId"/>
+            </field>
+            <field property="ddDate" depends="required">
+                <arg0 key="billing.ddDate"/>
+            </field>
+            <field property="ddChallanNumber" depends="required">
+                <arg0 key="billing.ddChallanNumber"/>
+            </field>
+            <field property="entityType" depends="required">
+                <arg0 key="billing.entityType"/>
+            </field>
+        </form>
+        <!--Billing-END-->
     </formset>
 
   <formset>
