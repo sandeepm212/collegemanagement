@@ -1,0 +1,17 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <mapping class="com.management.college.model.User"/>
+        <mapping class="com.management.college.model.Role"/>
+        <mapping class="com.management.college.model.DecodeGroup"/>
+        <mapping class="com.management.college.model.DecodeValue"/>
+        <mapping class="com.management.college.model.PersonName"/>
+        <mapping class="com.management.college.model.Student"/>
+        <mapping class="com.management.college.model.DecodeValue"/>
+        <mapping class="com.management.college.model.DecodeValue"/>
+        <mapping class="com.management.college.model.DecodeGroup"/>
+        <mapping class="com.management.college.model.Course"/>
+    </session-factory>
+</hibernate-configuration>

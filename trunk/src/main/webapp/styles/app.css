@@ -1,0 +1,99 @@
+.hidden {
+	display: none;
+}
+
+label { 
+	width: 15em;
+	color:#212121;
+	font:13px Arial,Helvetica,sans-serif;
+}
+
+label.desc {
+	/*font-weight: bold;*/
+}
+
+label.heading {
+	font-weight: bold;
+}
+
+input, .text {
+	border: 1px solid #699C4D;	
+}
+
+.grid_7, .grid_9 {
+	padding: 5px 0px;	
+}
+
+label.error { 
+	color: red;
+	display: block;
+	padding: .3em 0 0 0; 
+}
+
+.req {
+    color: #cc0000 !important;
+    float: right;
+}
+
+em { 
+	font-weight: bold; 
+	padding-right: 1em; 
+	vertical-align: top;
+	font-size: 1.2em;  
+}
+
+label.error {
+	margin-left:0px;
+	width:auto;
+}
+
+.success {
+	background-color: #003300;
+	color: #fff;
+	font-size: 14px;
+	padding: 5px; 
+}
+.hidden {
+	display: none;
+}
+
+.flexigrid th div, .flexigrid .add {
+	font-weight: bold;	
+}
+
+h1.pageHeading {
+	margin: 5px 0px 15px 0px;
+	color: #003300; 	
+}
+
+.artzBtnLinks { 
+	-moz-border-radius:2.5px; 
+	border-radius:2.5px; 
+	cursor:pointer; 
+	font:bold 12px Tahoma,Arial,sans-serif !important; 
+	border:solid 1px #003300 !important; 
+	color:#fff !important; 
+	background-color:#699C4D; 
+	filter:progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#FCFEFE,endColorStr=#D7E8F4); 
+	padding: 5px;	
+	_padding: 5px;	
+	margin: 8px 2px;
+}
+
+
+.tworow1 {
+	padding: 5px 0px 1px 0px;
+}
+
+.tworow2 {
+	padding: 1px 0px 5px 0px;
+}
+
+.ui-tabs .ui-tabs-panel {
+	padding: 0.4em;	
+}
+
+.separator {
+	border-top: 1px solid #699C4D; 
+	margin: 5px 0px 10px 0px;
+}
