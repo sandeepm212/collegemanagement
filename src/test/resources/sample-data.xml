@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <table name="mgmt_user">
+        <column>id</column>
+        <column>username</column>
+        <column>password</column>
+        <column>first_name</column>
+        <column>last_name</column>
+        <column>email</column>
+        <column>phone_number</column>
+        <column>website</column>
+        <column>password_hint</column>
+        <column>version</column>
+        <column>account_enabled</column>
+        <column>account_expired</column>
+        <column>account_locked</column>
+        <column>credentials_expired</column>
+        <column>created_on</column>
+        <column>updated_on</column>
+        <row>
+            <value description="id">1</value>
+            <value description="username">user</value>
+            <value description="password">12dea96fec20593566ab75692c9949596833adc9</value>
+            <value description="first_name">Tomcat</value>
+            <value description="last_name">User</value>
+            <value description="email">matt_raible@yahoo.com</value>
+            <value description="phone_number"></value>
+            <value description="website">http://tomcat.apache.org</value>
+            <value description="password_hint"><![CDATA[A male kitty.]]></value>
+            <value description="version">1</value>
+            <value description="account_enabled">1</value>
+            <value description="account_expired">0</value>
+            <value description="account_locked">0</value>
+            <value description="credentials_expired">0</value>
+            <value description="created_on"><![CDATA[2010-09-09 00:00:00.0]]></value>
+            <value description="updated_on"><![CDATA[2010-09-09 00:00:00.0]]></value>
+        </row>
+        <row>
+            <value description="id">2</value>
+            <value description="username">admin</value>
+            <value description="password">d033e22ae348aeb5660fc2140aec35850c4da997</value>
+            <value description="first_name">Matt</value>
+            <value description="last_name">Raible</value>
+            <value description="email">matt@raibledesigns.com</value>
+            <value description="phone_number"></value>
+            <value description="website">http://raibledesigns.com</value>
+            <value description="password_hint"><![CDATA[Not a female kitty.]]></value>
+            <value description="version">1</value>
+            <value description="account_enabled">1</value>
+            <value description="account_expired">0</value>
+            <value description="account_locked">0</value>
+            <value description="credentials_expired">0</value>
+            <value description="created_on"><![CDATA[2010-09-09 00:00:00.0]]></value>
+            <value description="updated_on"><![CDATA[2010-09-09 00:00:00.0]]></value>
+        </row>
+    </table>
+    <table name="mgmt_role">
+        <column>id</column>
+        <column>name</column>
+        <column>description</column>
+        <column>created_on</column>
+        <column>updated_on</column>
+        <row>
+            <value description="id">1</value>
+            <value description="name">ROLE_ADMIN</value>
+            <value description="description"><![CDATA[Administrator role (can edit Users)]]></value>
+            <value description="created_on"><![CDATA[2010-09-09 00:00:00.0]]></value>
+            <value description="updated_on"><![CDATA[2010-09-09 00:00:00.0]]></value>
+        </row>
+        <row>
+            <value description="id">2</value>
+            <value description="name">ROLE_USER</value>
+            <value description="description"><![CDATA[Default role for all Users]]></value>
+            <value description="created_on"><![CDATA[2010-09-09 00:00:00.0]]></value>
+            <value description="updated_on"><![CDATA[2010-09-09 00:00:00.0]]></value>
+        </row>
+    </table>
+    <table name="mgmt_user_role">
+        <column>user_id</column>
+        <column>role_id</column>
+        <row>
+            <value description="user_id">1</value>
+            <value description="role_id">2</value>
+        </row>
+        <row>
+            <value description="user_id">2</value>
+            <value description="role_id">1</value>
+        </row>
+    </table>
+    <!--DecodeGroup-START-->
+    <table name="mgmt_decode_group">
+        <column>id</column>
+        <column>created_on</column>
+        <column>updated_on</column>
+        <column>version</column>
+        <column>code</column>
+        <column>description</column>
+        <column>enabled</column>
+        <column>locked</column>
+        <column>name</column>
+    <row>
+        <value description="id">4</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="code">course_group</value>
+        <value description="description">Course Group</value>
+        <value description="enabled">1</value>
+        <value description="locked">0</value>
+        <value description="name">Course Group</value>
+    </row>
+    <row>
+        <value description="id">5</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="code">phone_type</value>
+        <value description="description">Phone Type</value>
+        <value description="enabled">1</value>
+        <value description="locked">0</value>
+        <value description="name">Phone Type</value>
+    </row>
+    <row>
+        <value description="id">6</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="code">address_type</value>
+        <value description="description">Address Type</value>
+        <value description="enabled">1</value>
+        <value description="locked">0</value>
+        <value description="name">Address Type</value>
+    </row>
+    </table>
+    <!--DecodeGroup-END-->
+    <!--DecodeValue-START-->
+    <table name="mgmt_decode_value">
+        <column>id</column>
+        <column>created_on</column>
+        <column>updated_on</column>
+        <column>version</column>
+        <column>decode_group_id</column>    
+        <column>description</column>
+        <column>display_order</column>
+        <column>enabled</column>
+        <column>short_code</column>
+        <column>value</column>
+    <row>
+        <value description="id">1</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">4</value>
+        <value description="description">Polytechnic</value>
+        <value description="display_order">2</value>
+        <value description="enabled">1</value>
+        <value description="short_code">Polytechnic</value>
+        <value description="value">Polytechnic</value>
+    </row>
+    <row>
+        <value description="id">2</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">4</value>
+        <value description="description"><![CDATA[UG & PG]]></value>
+        <value description="display_order">2</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[UG & PG]]></value>
+        <value description="value"><![CDATA[UG & PG]]></value>
+    </row>
+    <row>
+        <value description="id">3</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">4</value>
+        <value description="description">MCA</value>
+        <value description="display_order">2</value>
+        <value description="enabled">1</value>
+        <value description="short_code">MCA</value>
+        <value description="value">MCA</value>
+    </row>
+    <row>
+        <value description="id">4</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">5</value>
+        <value description="description">Mobile</value>
+        <value description="display_order">1</value>
+        <value description="enabled">1</value>
+        <value description="short_code">Mobile</value>
+        <value description="value">Mobile</value>
+    </row>
+    <row>
+        <value description="id">5</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">5</value>
+        <value description="description">Home Phone</value>
+        <value description="display_order">2</value>
+        <value description="enabled">1</value>
+        <value description="short_code">Home Phone</value>
+        <value description="value">Home Phone</value>
+    </row>
+    <row>
+        <value description="id">6</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">5</value>
+        <value description="description">Fax</value>
+        <value description="display_order">5</value>
+        <value description="enabled">1</value>
+        <value description="short_code">Fax</value>
+        <value description="value">Fax</value>
+    </row>
+    <row>
+        <value description="id">7</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">5</value>
+        <value description="description">Other</value>
+        <value description="display_order">5</value>
+        <value description="enabled">1</value>
+        <value description="short_code">Other</value>
+        <value description="value">Other</value>
+    </row>
+    <row>
+        <value description="id">8</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">6</value>
+        <value description="description">Home Address</value>
+        <value description="display_order">5</value>
+        <value description="enabled">1</value>
+        <value description="short_code">Home Address</value>
+        <value description="value">Home Address</value>
+    </row>
+    <row>
+        <value description="id">9</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">6</value>
+        <value description="description">Other</value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code">Other</value>
+        <value description="value">Other</value>
+    </row>
+    </table>
+    <!--DecodeValue-END-->
+    
+    <!--Course-START-->
+    <table name="mgmt_course">
+        <column>id</column>
+        <column>created_on</column>
+        <column>updated_on</column>
+        <column>version</column>
+        <column>branch</column>
+        <column>code</column>
+        <column>description</column>
+        <column>duration</column>
+        <column>group_id</column>    
+        <column>intake</column>
+    <row>
+        <value description="id">1</value>
+        <value description="created_on">2010-09-25</value>
+        <value description="updated_on">2010-09-25</value>
+        <value description="version">1</value>
+        <value description="branch">Electronics</value>
+        <value description="code">EE</value>
+        <value description="description">Electronics and communication</value>
+        <value description="duration">4</value>
+        <value description="group_id">4</value>
+        <value description="intake">125</value>
+    </row>
+    <row>
+        <value description="id">2</value>
+        <value description="created_on">2010-09-25</value>
+        <value description="updated_on">2010-09-25</value>
+        <value description="version">1</value>
+        <value description="branch">Information</value>
+        <value description="code">IE</value>
+        <value description="description">Information Technology</value>
+        <value description="duration">4</value>
+        <value description="group_id">5</value>
+        <value description="intake">199</value>
+    </row>
+    <row>
+        <value description="id">3</value>
+        <value description="created_on">2010-09-25</value>
+        <value description="updated_on">2010-09-25</value>
+        <value description="version">1</value>
+        <value description="branch">Computer Scince</value>
+        <value description="code">CSE</value>
+        <value description="description">DESC</value>
+        <value description="duration">5</value>
+        <value description="group_id">6</value>
+        <value description="intake">500</value>
+    </row>
+    </table>
+    <!--Course-END-->
+    <!--Student-START-->
+    <table name="mgmt_student">
+        <column>id</column>
+        <column>created_on</column>
+        <column>updated_on</column>
+        <column>version</column>
+        <column>admission_number</column>
+        <column>blood_group</column>
+        <column>course_id</column>
+        <column>current_year</column>
+        <column>gender</column>
+        <column>identification_marks</column>
+        <column>joining_date</column>
+        <column>nationality</column>
+        <column>registration_number</column>
+        <column>religion</column>
+        <column>student_id</column>
+    <row>
+        <value description="id">1</value>
+        <value description="created_on">2010-09-17</value>
+        <value description="updated_on">2010-09-17</value>
+        <value description="version">1</value>
+        <value description="admission_number">AdminNum1</value>
+        <value description="blood_group">3</value>
+        <value description="course_id">1</value>
+        <value description="current_year">1</value>
+        <value description="gender">Male</value>
+        <value description="identification_marks">Left Right</value>
+        <value description="joining_date">2010-09-17</value>
+        <value description="nationality">2</value>
+        <value description="registration_number">345666</value>
+        <value description="religion">1</value>
+        <value description="student_id">45665</value>
+    </row>
+    <row>
+        <value description="id">2</value>
+        <value description="created_on">2010-09-17</value>
+        <value description="updated_on">2010-09-17</value>
+        <value description="version">1</value>
+        <value description="admission_number">456456</value>
+        <value description="blood_group">2</value>
+        <value description="course_id">1</value>
+        <value description="current_year">1</value>
+        <value description="gender">Male</value>
+        <value description="identification_marks">Left Right</value>
+        <value description="joining_date">2010-09-17</value>
+        <value description="nationality">1</value>
+        <value description="registration_number">39845</value>
+        <value description="religion">2</value>
+        <value description="student_id">38475987</value>
+    </row>
+    <row>
+        <value description="id">3</value>
+        <value description="created_on">2010-09-17</value>
+        <value description="updated_on">2010-09-17</value>
+        <value description="version">1</value>
+        <value description="admission_number">394875</value>
+        <value description="blood_group">1</value>
+        <value description="course_id">2</value>
+        <value description="current_year">1</value>
+        <value description="gender">Male</value>
+        <value description="identification_marks">Right Left</value>
+        <value description="joining_date">2010-09-17</value>
+        <value description="nationality">5</value>
+        <value description="registration_number">2374</value>
+        <value description="religion">2</value>
+        <value description="student_id">93847</value>
+    </row>
+    </table>
+    <!--Student-END-->
+    
+    
+    
+    <!--Address-START-->
+    <table name="mgmt_address">
+        <column>id</column>
+        <column>created_on</column>
+        <column>updated_on</column>
+        <column>version</column>
+        <column>address_type</column>
+        <column>city</column>
+        <column>country</column>
+        <column>display_order</column>
+        <column>enabled</column>
+        <column>owner_entity_id</column>
+        <column>owner_entity_type</column>
+        <column>postal_code</column>
+        <column>primary_address</column>
+        <column>state_province</column>
+        <column>street</column>
+        <column>unique_code</column>
+    <row>
+        <value description="id">-1</value>
+        <value description="created_on">2010-09-26</value>
+        <value description="updated_on">2010-09-26</value>
+        <value description="version">1</value>
+        <value description="address_type">1</value>
+        <value description="city">City1</value>
+        <value description="country">Ag</value>
+        <value description="display_order">1</value>
+        <value description="enabled">0</value>
+        <value description="owner_entity_id">2</value>
+        <value description="owner_entity_type">2</value>
+        <value description="postal_code">500023</value>
+        <value description="primary_address">0</value>
+        <value description="state_province">US</value>
+        <value description="street">Street</value>
+        <value description="unique_code">UU</value>
+    </row>
+    <row>
+        <value description="id">-2</value>
+        <value description="created_on">2010-09-26</value>
+        <value description="updated_on">2010-09-26</value>
+        <value description="version">1</value>
+        <value description="address_type">6</value>
+        <value description="city">C1</value>
+        <value description="country">Du</value>
+        <value description="display_order">2</value>
+        <value description="enabled">0</value>
+        <value description="owner_entity_id">3</value>
+        <value description="owner_entity_type">5</value>
+        <value description="postal_code">400002</value>
+        <value description="primary_address">0</value>
+        <value description="state_province">ST</value>
+        <value description="street">Street2</value>
+        <value description="unique_code">UC</value>
+    </row>
+    <row>
+        <value description="id">-3</value>
+        <value description="created_on">2010-09-26</value>
+        <value description="updated_on">2010-09-26</value>
+        <value description="version">1</value>
+        <value description="address_type">8</value>
+        <value description="city">7</value>
+        <value description="country">Xr</value>
+        <value description="display_order">7</value>
+        <value description="enabled">0</value>
+        <value description="owner_entity_id">6</value>
+        <value description="owner_entity_type">3</value>
+        <value description="postal_code">2</value>
+        <value description="primary_address">0</value>
+        <value description="state_province">2</value>
+        <value description="street">Stee</value>
+        <value description="unique_code">FD</value>
+    </row>
+    </table>
+    <!--Address-END-->
+    <!--Phone-START-->
+    <table name="mgmt_phone">
+        <column>id</column>
+        <column>created_on</column>
+        <column>updated_on</column>
+        <column>version</column>
+        <column>data_type</column>
+        <column>data_value</column>
+        <column>display_order</column>
+        <column>enabled</column>
+        <column>entity_sub_type</column>
+        <column>owner_entity_id</column>
+        <column>owner_entity_type</column>
+        <column>primary_phone</column>
+    <row>
+        <value description="id">1</value>
+        <value description="created_on">2010-09-26</value>
+        <value description="updated_on">2010-09-26</value>
+        <value description="version">1</value>
+        <value description="data_type">4</value>
+        <value description="data_value">KP</value>
+        <value description="display_order">1</value>
+        <value description="enabled">0</value>
+        <value description="entity_sub_type">1</value>
+        <value description="owner_entity_id">6</value>
+        <value description="owner_entity_type">2</value>
+        <value description="primary_phone">7225496462775339008</value>
+    </row>
+    <row>
+        <value description="id">2</value>
+        <value description="created_on">2010-09-26</value>
+        <value description="updated_on">2010-09-26</value>
+        <value description="version">1</value>
+        <value description="data_type">4</value>
+        <value description="data_value">NJ</value>
+        <value description="display_order">11</value>
+        <value description="enabled">0</value>
+        <value description="entity_sub_type">3</value>
+        <value description="owner_entity_id">4</value>
+        <value description="owner_entity_type">1</value>
+        <value description="primary_phone">3866753460367589376</value>
+    </row>
+    <row>
+        <value description="id">3</value>
+        <value description="created_on">2010-09-26</value>
+        <value description="updated_on">2010-09-26</value>
+        <value description="version">1</value>
+        <value description="data_type">2</value>
+        <value description="data_value">RR</value>
+        <value description="display_order">7</value>
+        <value description="enabled">0</value>
+        <value description="entity_sub_type">16</value>
+        <value description="owner_entity_id">10</value>
+        <value description="owner_entity_type">2</value>
+        <value description="primary_phone">2957558885510017024</value>
+    </row>
+    </table>
+    <!--Phone-END-->
+    <!--PersonName-START-->
+    <table name="mgmt_person_name">
+        <column>id</column>
+        <column>created_on</column>
+        <column>updated_on</column>
+        <column>version</column>
+        <column>display_name</column>
+        <column>first_name</column>
+        <column>last_name</column>
+        <column>middle_name</column>
+        <column>owner_entity_id</column>
+        <column>owner_entity_type</column>
+        <column>person_type</column>
+        <column>suffix</column>
+        <column>title</column>
+    <row>
+        <value description="id">-1</value>
+        <value description="created_on">2010-09-26</value>
+        <value description="updated_on">2010-09-26</value>
+        <value description="version">1</value>
+        <value description="display_name">Student1</value>
+        <value description="first_name">Student1 FN</value>
+        <value description="last_name">Student1 LN</value>
+        <value description="middle_name">Student1 MN</value>
+        <value description="owner_entity_id">1</value>
+        <value description="owner_entity_type">3</value>
+        <value description="person_type">0</value>
+        <value description="suffix">Mr</value>
+        <value description="title">8</value>
+    </row>
+    <row>
+        <value description="id">2</value>
+        <value description="created_on">2010-09-26</value>
+        <value description="updated_on">2010-09-26</value>
+        <value description="version">1</value>
+        <value description="display_name">Student2</value>
+        <value description="first_name">Student2 FN</value>
+        <value description="last_name">Student2 LN</value>
+        <value description="middle_name">Student2 MN</value>
+        <value description="owner_entity_id">2</value>
+        <value description="owner_entity_type">3</value>
+        <value description="person_type">0</value>
+        <value description="suffix">Mr</value>
+        <value description="title">8</value>
+    </row>
+    <row>
+        <value description="id">3</value>
+        <value description="created_on">2010-09-26</value>
+        <value description="updated_on">2010-09-26</value>
+        <value description="version">1</value>
+        <value description="display_name">Student3</value>
+        <value description="first_name">Student3 FN</value>
+        <value description="last_name">Student3 LN</value>
+        <value description="middle_name">Student3 MN</value>
+        <value description="owner_entity_id">3</value>
+        <value description="owner_entity_type">3</value>
+        <value description="person_type">0</value>
+        <value description="suffix">Mr</value>
+        <value description="title">8</value>
+    </row>
+    </table>
+    <!--PersonName-END-->
+    
+    <table name="mgmt_id_table">
+    	<column>table_name</column>
+    	<column>next_id</column>
+    	<row>
+    		<value description="table_name">mgmt_course</value>
+    		<value description="next_id">15</value>
+    	</row>
+    	<row>
+    		<value description="table_name">mgmt_decode_group</value>
+    		<value description="next_id">15</value>
+    	</row>
+    	<row>
+    		<value description="table_name">mgmt_decode_value</value>
+    		<value description="next_id">15</value>
+    	</row>
+    	<row>
+    		<value description="table_name">mgmt_person_name</value>
+    		<value description="next_id">15</value>
+    	</row>
+    	<row>
+    		<value description="table_name">mgmt_role</value>
+    		<value description="next_id">15</value>
+    	</row>
+    	<row>
+    		<value description="table_name">mgmt_student</value>
+    		<value description="next_id">15</value>
+    	</row>
+    	<row>
+    		<value description="table_name">mgmt_user</value>
+    		<value description="next_id">15</value>
+    	</row>
+    </table>
+</dataset>
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE dwr PUBLIC
+    "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN"
+    "http://getahead.ltd.uk/dwr/dwr20.dtd">
+<dwr>
+    <allow>
+        <create creator="spring" javascript="DWRUserManager">
+            <param name="class" value="com.management.college.service.UserManager"/>
+            <param name="beanName" value="userManager"/>
+            <include method="getUsers"/>
+        </create>
+        
+        <create creator="spring" javascript="DWRDecodeGroupManager">
+            <param name="class" value="com.management.college.service.DecodeGroupManager"/>
+            <param name="beanName" value="decodeGroupManager"/>
+            <include method="getDecodeGroup"/>
+            <include method="getDecodeGroups"/>
+            <include method="saveDecodeGroup"/>
+            <include method="removeDecodeGroup"/>
+            
+            <include method="getDecodeValue"/>            
+            <include method="getDecodeValues"/>            
+            <include method="saveDecodeValue"/>
+            <include method="removeDecodeValue"/>
+        </create>
+        
+        <create creator="spring" javascript="DWRStudentManager">
+            <param name="class" value="com.management.college.service.StudentManager"/>
+            <param name="beanName" value="studentManager"/>
+            <include method="getStudents"/>
+        </create>
+        
+        <create creator="spring" javascript="DWRCourseManager">
+            <param name="class" value="com.management.college.service.CourseManager"/>
+            <param name="beanName" value="courseManager"/>
+            <include method="getCourses"/>
+            <include method="saveCourse"/>
+            <include method="getCourse"/>
+            <include method="removeCourse"/>
+        </create>
+        
+        <convert converter="bean" match="com.management.college.model.User"/>
+        <convert converter="bean" match="com.management.college.model.DecodeGroup"/>
+        <convert converter="bean" match="com.management.college.model.DecodeValue"/>
+        <convert converter="bean" match="com.management.college.model.Course"/>
+        <convert converter="bean" match="com.management.college.model.Student"/>
+        <convert converter="bean" match="com.management.college.model.view.StudentView"/>
+        <convert converter="bean" match="com.management.college.model.PersonName"/>
+        <convert converter="bean" match="com.management.college.model.util.ListWrapper"/>
+        <convert converter="bean" match="com.management.college.model.util.FilterInfo"/>
+    </allow>
+</dwr>

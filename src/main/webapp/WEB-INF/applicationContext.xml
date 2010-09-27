@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+       default-lazy-init="true">
+
+    <!--StudentDao-START-->
+    <bean id="studentDao" class="com.management.college.dao.hibernate.StudentDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--StudentDao-END-->
+
+    
+
+    <!--DecodeValueDao-START-->
+    <bean id="decodeValueDao" class="com.management.college.dao.hibernate.DecodeValueDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--DecodeValueDao-END-->
+
+    <!--DecodeGroupDao-START-->
+    <bean id="decodeGroupDao" class="com.management.college.dao.hibernate.DecodeGroupDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--DecodeGroupDao-END-->
+
+    <!--CourseDao-START-->
+    <bean id="courseDao" class="com.management.college.dao.hibernate.CourseDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--CourseDao-END-->
+
+    <!--AddressDao-START-->
+    <bean id="addressDao" class="com.management.college.dao.hibernate.AddressDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--AddressDao-END-->
+
+    <!--PhoneDao-START-->
+    <bean id="phoneDao" class="com.management.college.dao.hibernate.PhoneDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--PhoneDao-END-->
+
+    <!--PersonNameDao-START-->
+    <bean id="personNameDao" class="com.management.college.dao.hibernate.PersonNameDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--PersonNameDao-END-->
+
+    <!-- Add new DAOs here -->
+
+    <!--StudentManager-START-->
+    <bean id="studentManager" class="com.management.college.service.impl.StudentManagerImpl">
+        <constructor-arg ref="studentDao"/>
+    </bean>
+    <!--StudentManager-END-->
+
+    
+
+    <!--DecodeValueManager-START-->
+    <bean id="decodeValueManager" class="com.management.college.service.impl.DecodeValueManagerImpl">
+        <constructor-arg ref="decodeValueDao"/>
+    </bean>
+    <!--DecodeValueManager-END-->
+
+    <!--DecodeGroupManager-START-->
+    <bean id="decodeGroupManager" class="com.management.college.service.impl.DecodeGroupManagerImpl">
+        <constructor-arg ref="decodeGroupDao"/>
+    </bean>
+    <!--DecodeGroupManager-END-->
+
+    <!--CourseManager-START-->
+    <bean id="courseManager" class="com.management.college.service.impl.CourseManagerImpl">
+        <constructor-arg ref="courseDao"/>
+    </bean>
+    <!--CourseManager-END-->
+
+    <!--AddressManager-START-->
+    <bean id="addressManager" class="com.management.college.service.impl.AddressManagerImpl">
+        <constructor-arg ref="addressDao"/>
+    </bean>
+    <!--AddressManager-END-->
+
+    <!--PhoneManager-START-->
+    <bean id="phoneManager" class="com.management.college.service.impl.PhoneManagerImpl">
+        <constructor-arg ref="phoneDao"/>
+    </bean>
+    <!--PhoneManager-END-->
+
+    <!--PersonNameManager-START-->
+    <bean id="personNameManager" class="com.management.college.service.impl.PersonNameManagerImpl">
+        <constructor-arg ref="personNameDao"/>
+    </bean>
+    <!--PersonNameManager-END-->
+
+    <!-- Add new Managers here -->
+</beans>
