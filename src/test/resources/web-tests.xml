@@ -9,7 +9,7 @@
 
     <!-- runs all targets -->
     <target name="run-all-tests" 
-        depends="Login,Logout,PasswordHint,Signup,StaticPages,UserTests,FlushCache,FileUpload,PersonNameTests,PhoneTests,AddressTests,CourseTests,DecodeGroupTests,DecodeValueTests,DecodeValueTests,StudentTests"
+        depends="Login,Logout,PasswordHint,Signup,StaticPages,UserTests,FlushCache,FileUpload,BillingTests,PersonNameTests,PhoneTests,AddressTests,CourseTests,DecodeGroupTests,DecodeValueTests,DecodeValueTests,StudentTests"
         description="Call and executes all test cases (targets)"/>
     
     <!-- runs user-related tests -->
@@ -949,4 +949,108 @@
             </steps>
         </webtest>
     </target>    <!--PersonName-END-->
+    <!--Billing-START-->
+    <!-- runs billing-related tests -->
+    <target name="BillingTests"
+            depends="SearchBillings,EditBilling,SaveBilling,AddBilling,DeleteBilling"
+            description="Call and executes all billing test cases (targets)">
+        <echo>Successfully ran all Billing UI tests!</echo>
+    </target>
+
+    <!-- Verify the billings list screen displays without errors -->
+    <target name="SearchBillings" description="Tests search for and displaying all billings">
+        <webtest name="searchBillings">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click View Billing link" url="/billings.html"/>
+                <verifytitle description="we should see the billingList title"
+                    text=".*${billingList.title}.*" regex="true"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Verify the edit billing screen displays without errors -->
+    <target name="EditBilling" description="Tests editing an existing Billing's information">
+        <webtest name="editBilling">
+            &config;
+            <steps>
+                &login;
+                <invoke description="View Billing List" url="/billings.html"/>
+                <clicklink label="-1" description="Click edit link"/>
+                <verifytitle description="we should see the billingDetail title"
+                    text=".*${billingDetail.title}.*" regex="true"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Edit a billing and then save -->
+    <target name="SaveBilling" description="Tests editing and saving a billing">
+        <webtest name="saveBilling">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Edit Billing link" url="/billingform.html?id=-1"/>
+                <verifytitle description="we should see the billingDetail title"
+                    text=".*${billingDetail.title}.*" regex="true"/>
+
+                <!-- update some of the required fields -->
+                <setInputField description="set createdOn" name="createdOn" value="09/27/2010"/>
+                <setInputField description="set updatedOn" name="updatedOn" value="09/27/2010"/>
+                <setInputField description="set accountNumber" name="accountNumber" value="AmYhJhVbXgBuLdJdIdDiFdQhXyNhJyTrTlStKvVrRxSxZvRzNiRxJvCcLtReCwWcLmQoPcTcIaHtKwBnBmSyTfDuAqEjUuXsUuYaBpTtOdEhZiWqThYuLhXwFfUkKwEsQvBrZiTbSwAxHfAxHmDkByIdFhBoXvHwLoNbTzQlSvVoKbLxAlQqAcQpNaUdKqQeLfUrGnShSvViKbOfWyVvGlVvAiScWsAtKbUyUpUtMjDcChIkSdGkSfUoLhNzWhS"/>
+                <setInputField description="set admissionNumber" name="admissionNumber" value="AhTaXpSwEsMsOwBeBtWlJrFjNqGzAsDrBsNuQkGsDrMyMzXlPfIoYtBuNpPjJvGzGxAuJnBdSiIbDeKyWmOzWqZiQlMgVfDqDrDrNpCcUhAxCaPtFhVcKsIfCsAkTlBlSzDiGoFmXlMfDgFoTdNkEfXuVzMyZpWjOlExBsRlGlFpQsTrVfDbUkBaPoDvJtQxTdUkQeEaPuXoUaGxVePmXbMzKrTpHkWuOxZnElYyAaOwRcPgHmQaPmTyErDfQlA"/>
+                <setInputField description="set bankId" name="bankId" value="588937109759440896"/>
+                <setInputField description="set ddDate" name="ddDate" value="RoElSlJoPyKzXhBcYzWlTeRlFpXiSfXiQnWkWlHeCoWcClBnLlNxEjJtRcTrUtSaJvCySuOpOvQzJnCxZvXaFoXkShQwPlCkCaKsVfNaJyInVcAvLgVkKbGkAfKfHyNkQsAqAxDvIsBbVoPaOrPzXgCzVkTbLdYtOdGzTtAeGhOlCeEyLnPfGsImVpDbMmPqAzCzCmYhMzFxDnTfLuFaJwOoLuIbHrHkMoFmAoOjEoQpEiDoBfSjAqZlSqSwBmO"/>
+                <setInputField description="set entityType" name="entityType" value="794225994"/>
+
+                <clickbutton label="${button.save}" description="Click Save"/>
+                <verifytitle description="Page re-appears if save successful"
+                    text=".*${billingDetail.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${billing.updated}"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Add a new Billing -->
+    <target name="AddBilling" description="Adds a new Billing">
+        <webtest name="addBilling">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Add Button" url="/billingform.html"/>
+                <verifytitle description="we should see the billingDetail title"
+                    text=".*${billingDetail.title}.*" regex="true"/>
+
+                <!-- enter required fields -->
+                <setInputField description="set createdOn" name="createdOn" value="09/27/2010"/>
+                <setInputField description="set updatedOn" name="updatedOn" value="09/27/2010"/>
+                <setInputField description="set accountNumber" name="accountNumber" value="AdBeRyIrZsKvWjPuFtPmHnIxVyOqIsMhQnInFfQqDpAjUrLjWiBjHyHuFlPbOsKpWcNpOeGqNuAxVzDuSzYhIoYqCyXkKvGjTtXqRgEpGpSbUmPnCuNtDjToXoAcYhSbYgScYoHdGjNhQtLeNsAmLjMlChDeNhXyAbNzXxVtHdGhNyCtYbAaUcQjGuZqFjKlHzUgCjPmEuFnIhNiQsFgNbUhLmGeKyEyOjZpHwWrDxScLwNuEdNgDmUwXxGbSdB"/>
+                <setInputField description="set admissionNumber" name="admissionNumber" value="SgNpNwZbYqLsUsLjCvBiMvKiToBqJaXkDzHnOmFfNiJuJqTlNvEbDhVtXkNoNxKvIxVxUbHfUdLnFzXfHkYyUrMgItFaTeLnOxYsMxYpBtPtBkFoKnGxJaGwXrXlItLkPpGiJeRjPkIlEjZgUlKdBtOmRaPoOwPaQqWoPmAiBwGpNpZrQaHjXlJdDlNjHiXdYnImMxUmSlDkMlOxYpDuKxVqZpCtQbCcNkQjDzYqOpAwQmRuMxTzHlBjYxDsWfI"/>
+                <setInputField description="set bankId" name="bankId" value="515521895931478016"/>
+                <setInputField description="set ddDate" name="ddDate" value="EgPuMmGlFqUlUuQrTlGjUkDgAgQpQaEqNeRaOqPnGoQzHxMzNxLnWdJfYeKwLgDvSfLtAlLxPlFyToHiGcDdAtVpTbBqJxDdBbDxXpEuNuQzPdZrAsFzCqEcQxPeVxIxAhRwPaJjQcZnLyIxRtEdHyPuHwRvBiIyIuPwBnScAcAtCeAmDdWqUiCkFqObGuJmRhPqNtLeZuBaLqGpXfMeFdCyLrFuPxZdGiWhZeAcRwEzBjJhDzVcOoDlHqLaWiU"/>
+                <setInputField description="set entityType" name="entityType" value="1010161796"/>
+
+                <clickbutton label="${button.save}" description="Click button 'Save'"/>
+                <verifytitle description="Billing List appears if save successful"
+                    text=".*${billingList.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${billing.added}"/>
+            </steps>
+        </webtest>
+    </target>
+
+    <!-- Delete existing billing -->
+    <target name="DeleteBilling" description="Deletes existing Billing">
+        <webtest name="deleteBilling">
+            &config;
+            <steps>
+                &login;
+                <invoke description="click Edit Billing link" url="/billingform.html?id=-1"/>
+                <prepareDialogResponse description="Confirm delete" dialogType="confirm" response="true"/>
+                <clickbutton label="${button.delete}" description="Click button 'Delete'"/>
+                <verifyNoDialogResponses/>
+                <verifytitle description="display Billing List" text=".*${billingList.title}.*" regex="true"/>
+                <verifytext description="verify success message" text="${billing.deleted}"/>
+            </steps>
+        </webtest>
+    </target>    <!--Billing-END-->
 </project>

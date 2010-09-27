@@ -17,5 +17,6 @@
         <mapping class="com.management.college.model.Phone"/>
         <mapping class="com.management.college.model.Phone"/>
         <mapping class="com.management.college.model.PersonName"/>
+        <mapping class="com.management.college.model.Billing"/>
     </session-factory>
 </hibernate-configuration>

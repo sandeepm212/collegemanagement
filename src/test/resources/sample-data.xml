@@ -606,11 +606,54 @@
     		<value description="next_id">15</value>
     	</row>
     </table>
+    <!--Billing-START-->
+    <table name="mgmt_billing">
+        <column>id</column>
+        <column>created_on</column>
+        <column>updated_on</column>
+        <column>version</column>
+        <column>account_number</column>
+        <column>admission_number</column>
+        <column>bank_id</column>
+        <column>dd_challan_number</column>
+        <column>dd_date</column>
+        <column>entityType</column>
+    <row>
+        <value description="id">1</value>
+        <value description="created_on">2010-09-27</value>
+        <value description="updated_on">2010-09-27</value>
+        <value description="version">1</value>
+        <value description="account_number">RV1234567889</value>
+        <value description="admission_number">3678</value>
+        <value description="bank_id">2</value>
+        <value description="dd_challan_number">3445</value>
+        <value description="dd_date">2010-09-27</value>
+        <value description="entityType">4</value>
+    </row>
+    <row>
+        <value description="id">2</value>
+        <value description="created_on">2010-09-27</value>
+        <value description="updated_on">2010-09-27</value>
+        <value description="version">1</value>
+        <value description="account_number">S34532342342Q23</value>
+        <value description="admission_number">5678</value>
+        <value description="bank_id">3</value>
+        <value description="dd_challan_number">345</value>
+        <value description="dd_date">2010-09-27</value>
+        <value description="entityType">2</value>
+    </row>
+    <row>
+        <value description="id">3</value>
+        <value description="created_on">2010-09-27</value>
+        <value description="updated_on">2010-09-27</value>
+        <value description="version">1</value>
+        <value description="account_number">23424g56756</value>
+        <value description="admission_number">234</value>
+        <value description="bank_id">2</value>
+        <value description="dd_challan_number">568</value>
+        <value description="dd_date">2010-09-27</value>
+        <value description="entityType">1</value>
+    </row>
+    </table>
+    <!--Billing-END-->
 </dataset>
-
-
-
-
-
-
-

@@ -11,6 +11,7 @@
 					<li><a title="Current Users" href="/admin/activeUsers.html">Current Users</a></li>
 					<li><a title="DecodeGroup List" href="/decodeGroups.html">DecodeGroup List</a></li>
 					<li><a title="Course List" href="/courses.html">Course List</a></li>
+					<li><a title="Course List" href="/billingform.html">Billing</a></li>
 				</ul>
 			</li>   
 		</ul>				

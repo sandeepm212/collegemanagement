@@ -29,5 +29,8 @@
         <!--PersonName-START-->
         <Menu name="PersonNameMenu" title="personNameList.title" page="/personNames.html"/>
         <!--PersonName-END-->
+        <!--Billing-START-->
+        <Menu name="BillingMenu" title="billingList.title" page="/billings.html"/>
+        <!--Billing-END-->
     </Menus>
 </MenuConfig>
