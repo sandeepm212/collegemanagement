@@ -18,7 +18,7 @@
 		<div id="welcome">
 			Welcome, <security:authentication property="principal.username" /> | 
 			<span><a href="<c:url value='/acct/viewProfile.html' />?id=<security:authentication property="principal.id" />">My Profile</a></span> |
-			<a href="<c:url value='/logout.html' />" class="ffc-link" onclick="location.href=this.href;">Sign Out</a>							
+			<a href="<c:url value='/logout.jsp' />" class="ffc-link" onclick="location.href=this.href;">Sign Out</a>							
 		</div>
 		</c:if>
 		<%-- Put constants into request scope --%>

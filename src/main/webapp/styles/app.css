@@ -24,6 +24,17 @@ input, .text {
 	padding: 5px 0px;	
 }
 
+.form .grid_1, .form .grid_2, .form .grid_3, .form .grid_4, 
+.form .grid_5, .form .grid_6, .form .grid_7, .form .grid_8, 
+.form .grid_9, .form .grid_10, .form .grid_11, .form .grid_12, 
+.form .grid_13, .form .grid_14, .form .grid_15, .form .grid_16, 
+.form .grid_17, .form .grid_18, .form .grid_19, .form .grid_20, 
+.form .grid_21, .form .grid_22, .form .grid_23, .form .grid_24, 
+.form .grid_25, .form .grid_26, .form .grid_27, .form .grid_28, 
+.form .grid_29, .form .grid_30, .form .grid_31, .form .grid_32 {
+	padding: 5px 0px;	
+}
+
 label.error { 
 	color: red;
 	display: block;
