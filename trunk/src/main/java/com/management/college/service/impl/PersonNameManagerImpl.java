@@ -16,4 +16,9 @@ public class PersonNameManagerImpl extends GenericManagerImpl<PersonName, Long> 
         super(personNameDao);
         this.personNameDao = personNameDao;
     }
+
+	public List<PersonName> getPersonNamesByOwner(int ownerEntityType,
+			Long ownerEntityId) {
+		return personNameDao.getPersonNamesByOwner(ownerEntityType, ownerEntityId);
+	}
 }

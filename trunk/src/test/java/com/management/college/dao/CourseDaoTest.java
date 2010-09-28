@@ -19,7 +19,7 @@ public class CourseDaoTest extends BaseDaoTestCase {
         // enter all required fields
         course.setCreatedOn(new java.util.Date());
         course.setUpdatedOn(new java.util.Date());
-        course.setBranch("HxCvBkTpSjHyBfJbEcNbReUpIkFnNeMmBxKcIyHzBaGgMjOqJuRjAiIuDbGpEpJzJkKwOyZrLmLgIsVtKtFrSmRgTqTkYfFfQkJkRoViLwKvUuVyNbKvTrIuRyWwGjAfZlDpJvLuYqXfYtPxMcJxSxShFzFfAxSsJxYcFjCqKwWpPxDcMjIrUgCeNkMeHiRfXlZaGkHjWiKeYmKrBoXiAlTuBnEqHzWkStWnBrTmOgKeWjDgNdDiOsLiDqUgQuU");
+        course.setName("HxCvBkTpSjHyBfJbEcNbReUpIkFnNeMmBxKcIyHzBaGgMjOqJuRjAiIuDbGpEpJzJkKwOyZrLmLgIsVtKtFrSmRgTqTkYfFfQkJkRoViLwKvUuVyNbKvTrIuRyWwGjAfZlDpJvLuYqXfYtPxMcJxSxShFzFfAxSsJxYcFjCqKwWpPxDcMjIrUgCeNkMeHiRfXlZaGkHjWiKeYmKrBoXiAlTuBnEqHzWkStWnBrTmOgKeWjDgNdDiOsLiDqUgQuU");
         course.setCode("SrPuGmBbYmYgHgQnJmThTrQvBtDxOyXhKrZcHgAiAtZpDsTnAmCePjPrMrNcElBxSbQlZiRkDfKpLiJuLfDpOwFvAzCjHeQhAfVoOyVzGqInVxHvAuKfWvCpXkFlLaJwWnHxKmKgCvTdMjRgUeSiQgYnDjUbNoEwQoNcCyCnCbPyQgMmSfUlDgQfCaUjCkGmRoDyJkHlHzYcLuEkUhQkQjZmUqKyTpKlXwUkNzDdOjTzExTrTcVkHzKvZeXuYoM");
         course.setDuration(1186272483);
 

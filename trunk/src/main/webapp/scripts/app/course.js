@@ -5,7 +5,7 @@ var courseFormValidator;
 var courseFilterInfo = {
 	"startIndex": "0",
 	"numResults": "2",
-	"sortColumn": "branch",
+	"sortColumn": "name",
 	"sortOrderAsc": "true"
 };
 
@@ -46,7 +46,7 @@ function courseGridButtonPress (com, grid) {
 
 var courseListColumns = [
      	            {display: 'Group', name : 'group.value', width : 157, sortable : true, align: 'left'},
-    	            {display: 'Branch', name : 'branch', width : 200, sortable : true, align: 'left'},
+    	            {display: 'Name', name : 'name', width : 200, sortable : true, align: 'left'},
     	            {display: 'Code', name : 'code', width : 57, sortable : true, align: 'left'},
     	            {display: 'Duration', name : 'duration', width : 57, sortable : true, align: 'left'},
     	            {display: 'Intake', name : 'intake', width : 57, sortable : true, align: 'left'},
@@ -62,7 +62,7 @@ $("#coursesList").flexigrid ({
 	},
 	dataType: 'json',
 	colModel : courseListColumns,
-	sortname: "branch",
+	sortname: "name",
 	sortorder: "asc",
 	usepager: true,
 	singleSelect: true,
@@ -95,7 +95,7 @@ function saveCourse () {
    	var course = {
    		"id": $("#courseId").val(),
    		"group": courseGroup,
-   		"branch": $("#branch").val(),
+   		"name": $("#name").val(),
    		"code": $("#code").val(),
    		"duration": $("#duration").val(),
    		"intake": $("#intake").val(),
@@ -151,7 +151,7 @@ function showCourseEditForm(aEle) {
  			
    		$("#courseId").val(data.id);
    		$("#group").val(data.group.id);
-   		$("#branch").val(data.branch);
+   		$("#name").val(data.name);
    		$("#code").val(data.code);
    		$("#description").val(data.description);
    		$("#duration").val(data.duration);
@@ -165,7 +165,7 @@ function showCourseEditForm(aEle) {
 $(document).ready(function() {
 	courseFormValidator = $("#courseForm").validate({
 		rules: {
-			branch: "required",
+			name: "required",
 			code: "required",
 			duration: "required number",
 			intake: "number"

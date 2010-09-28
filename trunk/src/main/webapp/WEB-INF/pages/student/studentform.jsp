@@ -34,9 +34,9 @@
 			    <option value="Other">Other</option>
 			</select>
 		</div>
-		<div class="grid_9 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="firstName" id="firstName"></div>
-		<div class="grid_7 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="middleName" id="middleName"></div>
-		<div class="grid_8 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="lastName" id="lastName"></div>
+		<div class="grid_9 tworow2"><input type="text" maxlength="255" value="<c:out value="${studentView.studentName.firstName}"/>" class="text medium" name="firstName" id="firstName"></div>
+		<div class="grid_7 tworow2"><input type="text" maxlength="255" value="<c:out value="${studentView.studentName.middleName}"/>" class="text medium" name="middleName" id="middleName"></div>
+		<div class="grid_8 tworow2"><input type="text" maxlength="255" value="<c:out value="${studentView.studentName.lastName}"/>" class="text medium" name="lastName" id="lastName"></div>
 		<div class="clear"></div>
 		
 		<div class="grid_7"><p><label class="desc" for="group">Group</label></p></div>
@@ -46,13 +46,13 @@
 		<div class="clear"></div>
 		
 		<div class="grid_7"><p><label class="desc" for="group">Date Of Birth</label></p></div>
-		<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="dateOfBirth" id="dateOfBirth"></div>
+		<div class="grid_9"><input type="text" maxlength="255" value="<c:out value="${studentView.dateOfBirth}"/>" class="text medium" name="dateOfBirth" id="dateOfBirth"></div>
 		<div class="grid_7"><p><appfuse:label styleClass="desc" key="student.currentYear"/></p></div>
-		<div class="grid_8"><input type="text" maxlength="255" value="" class="text medium" name="currentYear" id="currentYear"></div>
+		<div class="grid_8"><input type="text" maxlength="255" value="<c:out value="${studentView.currentYear}"/>" class="text medium" name="currentYear" id="currentYear"></div>
 		<div class="clear"></div>
 		
 		<div class="grid_7"><p><appfuse:label styleClass="desc" key="student.admissionNumber"/></p></div>
-		<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="admissionNumber" id="admissionNumber"></div>
+		<div class="grid_9"><input type="text" maxlength="255" value="<c:out value="${studentView.admissionNumber}"/>" class="text medium" name="admissionNumber" id="admissionNumber"></div>
 		<div class="grid_7"><p><appfuse:label styleClass="desc" key="student.bloodGroup"/></p></div>
 		<div class="grid_8"><input type="text" maxlength="255" value="" class="text medium" name="bloodGroup" id="bloodGroup"></div>
 		<div class="clear"></div>
@@ -60,12 +60,12 @@
 		<div class="grid_7"><p><appfuse:label styleClass="desc" key="student.gender"/></p></div>
 		<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="gender" id="gender"></div>
 		<div class="grid_7"><p><appfuse:label styleClass="desc" key="student.identificationMarks"/></p></div>
-		<div class="grid_8"><input type="text" maxlength="255" value="" class="text medium" name="identificationMarks" id="identificationMarks"></div>
+		<div class="grid_8"><input type="text" maxlength="255" value="<c:out value="${studentView.identificationMarks}"/>" class="text medium" name="identificationMarks" id="identificationMarks"></div>
 		<div class="clear"></div>
 	
 		<div class="grid_7"><p><appfuse:label styleClass="desc" key="student.joiningDate"/></p></div>
 		<div class="grid_9">
-			<input type="text" maxlength="11" value="" class="text small" name="joiningDate" id="joiningDate">
+			<input type="text" maxlength="11" value="<fmt:formatDate pattern="dd/MM/yyyy" value="${studentView.joiningDate}" />" class="text small" name="joiningDate" id="joiningDate">
 			<img src="<c:url value='/images/iconCalendar.gif'/>" alt="" id="joiningDateDatePicker" class="calIcon"/>
 		</div>	
 		<div class="grid_7"><p><appfuse:label styleClass="desc" key="student.nationality"/></p></div>	
@@ -80,7 +80,7 @@
 		<div class="clear"></div>
 		
 		<div class="grid_7"><p><appfuse:label styleClass="desc" key="student.studentId"/></p></div>
-		<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="studentId" id="studentId"></div>
+		<div class="grid_9"><input type="text" maxlength="255" value="<c:out value="${studentView.studentId}"/>" class="text medium" name="studentId" id="studentId"></div>
 		<div class="clear"></div>
 		
 		<!-- Father Info Start -->
@@ -91,9 +91,9 @@
 		<div class="clear"></div>
 		
 		<div class="grid_7 tworow2"><label class="desc">Father/Guardian Name</label></div>
-		<div class="grid_9 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="firstName" id="firstName"></div>
-		<div class="grid_7 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="middleName" id="middleName"></div>
-		<div class="grid_8 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="lastName" id="lastName"></div>
+		<div class="grid_9 tworow2"><input type="text" maxlength="255" value="<c:out value="${studentView.fatherFirstName}"/>" class="text medium" name="firstName" id="firstName"></div>
+		<div class="grid_7 tworow2"><input type="text" maxlength="255" value="<c:out value="${studentView.fatherMiddleName}"/>" class="text medium" name="middleName" id="middleName"></div>
+		<div class="grid_8 tworow2"><input type="text" maxlength="255" value="<c:out value="${studentView.fatherLastName}"/>" class="text medium" name="lastName" id="lastName"></div>
 		<div class="clear"></div>
 		<!-- Father Info End -->
 		
@@ -105,9 +105,9 @@
 		<div class="clear"></div>
 		
 		<div class="grid_7 tworow2"><label class="desc">Mother Name</label></div>
-		<div class="grid_9 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="firstName" id="firstName"></div>
-		<div class="grid_7 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="middleName" id="middleName"></div>
-		<div class="grid_8 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="lastName" id="lastName"></div>
+		<div class="grid_9 tworow2"><input type="text" maxlength="255" value="<c:out value="${studentView.motherFirstName}"/>" class="text medium" name="firstName" id="firstName"></div>
+		<div class="grid_7 tworow2"><input type="text" maxlength="255" value="<c:out value="${studentView.motherFirstName}"/>" class="text medium" name="middleName" id="middleName"></div>
+		<div class="grid_8 tworow2"><input type="text" maxlength="255" value="<c:out value="${studentView.motherFirstName}"/>" class="text medium" name="lastName" id="lastName"></div>
 		<div class="clear"></div>
 		<!-- Mother Info End -->
 	</div>
@@ -142,7 +142,7 @@
 <script type="text/javascript" src="<c:url value='/scripts/calendar/lang/calendar-en.js'/>"></script>
 <script type="text/javascript">
     $("#studentForm input[type='text']:first").focus();
-    Calendar.setup({inputField: "joiningDate", ifFormat: "%m/%d/%Y", button: "joiningDateDatePicker"});
+    Calendar.setup({inputField: "joiningDate", ifFormat: "%d/%m/%Y", button: "joiningDateDatePicker"});
     
     $(document).ready(function(){
     	$(function() {

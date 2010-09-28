@@ -11,5 +11,8 @@ import com.management.college.model.view.StudentView;
  * An interface that provides a data management interface to the Student table.
  */
 public interface StudentDao extends GenericDao<Student, Long> {
+	
+	public StudentView getStudent(Long id);
+	
 	public ListWrapper<StudentView> getStudents (Map filters, FilterInfo filterInfo);
 }

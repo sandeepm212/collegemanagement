@@ -8,5 +8,5 @@ import javax.jws.WebService;
 
 @WebService
 public interface PersonNameManager extends GenericManager<PersonName, Long> {
-    
+	List<PersonName> getPersonNamesByOwner (int ownerEntityType, Long ownerEntityId);
 }

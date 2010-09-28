@@ -9,14 +9,9 @@
         <mapping class="com.management.college.model.DecodeValue"/>
         <mapping class="com.management.college.model.PersonName"/>
         <mapping class="com.management.college.model.Student"/>
-        <mapping class="com.management.college.model.DecodeValue"/>
-        <mapping class="com.management.college.model.DecodeValue"/>
-        <mapping class="com.management.college.model.DecodeGroup"/>
         <mapping class="com.management.college.model.Course"/>
         <mapping class="com.management.college.model.Address"/>
         <mapping class="com.management.college.model.Phone"/>
-        <mapping class="com.management.college.model.Phone"/>
-        <mapping class="com.management.college.model.PersonName"/>
         <mapping class="com.management.college.model.Billing"/>
     </session-factory>
 </hibernate-configuration>
