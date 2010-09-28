@@ -3,17 +3,21 @@
 
 	<div id="smoothmenu">	
 		<ul id="menunav">
-			<li><a title="Home" href="/mainMenu.html">Home</a></li>
+			<li><a title="Home" href="/mainMenu.html" class="active">Home</a></li>
+			<security:authorize ifAnyGranted="ROLE_USER,ROLE_ADMIN">
 			<li><a title="Student List" href="/students.html">Student List</a></li>
-			<li><a title="Administration" href="/admin/users.html">Administration</a>
-				<ul>
-					<li><a title="View Users" href="/admin/users.html">View Users</a></li>
-					<li><a title="Current Users" href="/admin/activeUsers.html">Current Users</a></li>
-					<li><a title="DecodeGroup List" href="/decodeGroups.html">DecodeGroup List</a></li>
-					<li><a title="Course List" href="/courses.html">Course List</a></li>
-					<li><a title="Course List" href="/billingform.html">Billing</a></li>
-				</ul>
-			</li>   
+			</security:authorize>
+			<security:authorize ifAllGranted="ROLE_ADMIN">
+				<li><a title="Administration" href="/admin/users.html">Administration</a>
+					<ul>
+						<li><a title="View Users" href="/admin/users.html">View Users</a></li>
+						<li><a title="Current Users" href="/admin/activeUsers.html">Current Users</a></li>
+						<li><a title="DecodeGroup List" href="/decodeGroups.html">DecodeGroup List</a></li>
+						<li><a title="Course List" href="/courses.html">Course List</a></li>
+						<li><a title="Course List" href="/billingform.html">Billing</a></li>
+					</ul>
+				</li>
+			</security:authorize>			   
 		</ul>				
 	</div>	
 
