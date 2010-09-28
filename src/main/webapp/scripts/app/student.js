@@ -19,10 +19,11 @@ function getStudents (flexigrid) {
 }
 
 var studentsListCols = [
-{display: 'Name', name : 'studentName.fullName', width : 250, sortable : true, align: 'left'},
- {display: 'Course', name : 'courseName', width : 157, sortable : true, align: 'left'},
- {display: 'Joining Date', name : 'joiningDateStr', width : 80, sortable : true, align: 'left'},
- {display: 'Menu', name : 'EDIT_LINK', width : 80, sortable : true, align: 'left'}
+	{display: 'Name', name : 'studentName.fullName', width : 250, sortable : true, align: 'left'},
+	{display: 'Group', name : 'courseGroupName', width : 160, sortable : true, align: 'left'},
+	{display: 'Course', name : 'courseName', width : 157, sortable : true, align: 'left'},
+	{display: 'Joining Date', name : 'joiningDateStr', width : 80, sortable : true, align: 'left'},
+	{display: 'Menu', name : 'EDIT_LINK', width : 80, sortable : true, align: 'left'}
  ];
  
 var studentListWidth = getGridWidth(studentsListCols);

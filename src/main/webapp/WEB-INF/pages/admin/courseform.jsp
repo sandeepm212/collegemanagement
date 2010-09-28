@@ -19,8 +19,8 @@
 	</div>
 	<div class="clear"></div>
 	
-	<div class="grid_7"><p><appfuse:label styleClass="desc" key="course.branch"/></p></div>
-	<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="branch" id="branch"></div>
+	<div class="grid_7"><p><appfuse:label styleClass="desc" key="course.name"/></p></div>
+	<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="name" id="name"></div>
 	<div class="clear"></div>
 
 	<div class="grid_7"><p><appfuse:label styleClass="desc" key="course.code"/></p></div>

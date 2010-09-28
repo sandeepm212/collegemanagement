@@ -65,14 +65,15 @@
     </bean>
 
     <bean id="studentFormController" class="com.management.college.webapp.controller.StudentFormController">
-        <property name="validator" ref="beanValidator"/>
         <property name="formView" value="/student/studentform"/>
         <property name="successView" value="redirect:students.html"/>
         <property name="studentManager" ref="studentManager"/>
+        <property name="commandClass" value="com.management.college.model.view.StudentView" />
+        <property name="commandName" value="studentView" />
+        <property name="validateOnBinding" value="false" />
+        <property name="personNameManager" ref="personNameManager"/>
     </bean>
-    <!--Student-END-->
-
-    
+    <!--Student-END-->    
 
     <!--DecodeValue-START-->
     <bean id="decodeValueController" class="com.management.college.webapp.controller.DecodeValueController">

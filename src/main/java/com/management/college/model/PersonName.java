@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 import javax.persistence.Transient;
 import javax.persistence.Version;
@@ -24,14 +25,15 @@ import com.management.college.AppConstants;
  * @author <a
  *         href="mailto:malathi@endofthenight.com">malathi@endofthenight.com</a>
  */
-@Entity(name = "mgmt_person_name")
+@Entity
+@Table(name = "mgmt_person_name")
 public class PersonName extends BaseObject implements Serializable {
 
-	public static int PN_TYPE_DEFAULT = 0;
+	public static final int PN_TYPE_DEFAULT = 0;
 
-	public static int PN_TYPE_FATHER = 1;
+	public static final int PN_TYPE_FATHER = 1;
 
-	public static int PN_TYPE_MOTHER = 2;
+	public static final int PN_TYPE_MOTHER = 2;
 
 	/**
      * 

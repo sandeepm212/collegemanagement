@@ -51,7 +51,7 @@ public class CourseManagerImpl extends GenericManagerImpl<Course, Long>
 		}
 		DecodeValue courseGroup =  getCourseGroupDecodeValue(course.getGroup().getId());
 		courseTemp.setGroup(courseGroup);
-		courseTemp.setBranch(course.getBranch());
+		courseTemp.setName(course.getName());
 		courseTemp.setCode(course.getCode());
 		courseTemp.setDescription(course.getDescription());
 		courseTemp.setIntake(course.getIntake());

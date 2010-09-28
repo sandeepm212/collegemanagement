@@ -69,7 +69,7 @@ public class CourseManagerImplTest extends BaseManagerMockTestCase {
         // enter all required fields
         course.setCreatedOn(new java.util.Date());
         course.setUpdatedOn(new java.util.Date());
-        course.setBranch("JdCeTuZwBoLaOsUwOsZxGbWyEfLmDyNwCiTzIhAoYwCgKzBeYuUwFzGuAyLaTyMrKdEwJxFeKfUwNfGgBiEfCxXqUoQiXxVhBsGyGwKrXgZlVsThQdJsXcGoIxFoEwBiHqEyGcSwLoLuQxZhGfVtCqZyFlHiLvLdKwVxFxDtQbGqNcXuTrBwUlFnYaNeGvEpBkFwTdQaJvFbZfOpEvLyPlCmQoDmIoTxRwEbOhYzEyEvOcGxViBfPzNwWoZnGcM");
+        course.setName("JdCeTuZwBoLaOsUwOsZxGbWyEfLmDyNwCiTzIhAoYwCgKzBeYuUwFzGuAyLaTyMrKdEwJxFeKfUwNfGgBiEfCxXqUoQiXxVhBsGyGwKrXgZlVsThQdJsXcGoIxFoEwBiHqEyGcSwLoLuQxZhGfVtCqZyFlHiLvLdKwVxFxDtQbGqNcXuTrBwUlFnYaNeGvEpBkFwTdQaJvFbZfOpEvLyPlCmQoDmIoTxRwEbOhYzEyEvOcGxViBfPzNwWoZnGcM");
         course.setCode("DeJlKvNiJrYdZkTmOjTxBlNeGtWaUpUhEqSwYgXaThDyAuEsXmOyLvQuOgXzKbVyCvXvUaCbBhJyVyYtIrVeFeHqKyXiDzLgMfPaHaCrHxYhGiQbMgXbBrCiGpRlIeWrCaGnJrJmQvAwSvCqPrQaHgCyHoHyHvEeDvExDlBeRaZhFoCqEyKlFhUbDwInSxTiAvAvTeTkZqDfLqFdRqYrQcGmDaDsSnPqGjIqOeFcTcTxIiWyRsWkPyQyUsLePrJ");
         course.setDuration(60564224);
         

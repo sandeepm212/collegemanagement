@@ -40,7 +40,7 @@ public class CourseFormControllerTest extends BaseControllerTestCase {
         // update required fields
         course.setCreatedOn(new java.util.Date());
         course.setUpdatedOn(new java.util.Date());
-        course.setBranch("WkNpMzInCxHaOlZwGxBjHhUcGzIbLjZwPnEwQbQgAaYsQaHgMfMcKdGuImFvOwHwXeEcDwVwDaEtCcMoKtHePuOrRiDxFbImOyShIiMfLiWkUwElYuAiFuMvBoRcUiFnHeXpCcJsHpOyReLvKxHkIaXyEpLyBoBzWeEoLtMaPlWtSyImZrKaXiRlMkKjUhIcFyPwNmTzOnFuDhUqRiNqKaWbGaFqLjFqUbMsNtAsIrTxUmVcHzYaMyErDrSnJpQ");
+        course.setName("WkNpMzInCxHaOlZwGxBjHhUcGzIbLjZwPnEwQbQgAaYsQaHgMfMcKdGuImFvOwHwXeEcDwVwDaEtCcMoKtHePuOrRiDxFbImOyShIiMfLiWkUwElYuAiFuMvBoRcUiFnHeXpCcJsHpOyReLvKxHkIaXyEpLyBoBzWeEoLtMaPlWtSyImZrKaXiRlMkKjUhIcFyPwNmTzOnFuDhUqRiNqKaWbGaFqLjFqUbMsNtAsIrTxUmVcHzYaMyErDrSnJpQ");
         course.setCode("PpWlBgPwCxKvXuHwGuRqYzRsGvOxSbTzYuTmVrPaFsNdIoVkPyCyTdTuDsNaNqWoReElHsXzNxJtYyGxOeGvWeThNjHxUtSbHmZpXoOwUeTwGtWyHoPzUaVaJrQmCsQgFhHrGvZkNvOgFeQoZfHkYeFkHrIwDnKbUsDzIhAgTbNmLcWwHyPhNfLpTiLeLuOwDwVvXvRqSlByKyTcBaZzKzFjXuDeGhZyTfIdMiSeFtRpYiWoGgUhWpFxAtHqUbM");
         course.setDuration(509725335);
 

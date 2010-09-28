@@ -15,19 +15,23 @@ import java.util.Map;
 import javax.jws.WebService;
 
 @WebService(serviceName = "StudentService", endpointInterface = "com.management.college.service.StudentManager")
-public class StudentManagerImpl extends GenericManagerImpl<Student, Long> implements StudentManager {
-    StudentDao studentDao;
+public class StudentManagerImpl extends GenericManagerImpl<Student, Long>
+		implements
+			StudentManager {
+	StudentDao studentDao;
 
-    public StudentManagerImpl(StudentDao studentDao) {
-        super(studentDao);
-        this.studentDao = studentDao;
-    }
+	public StudentManagerImpl(StudentDao studentDao) {
+		super(studentDao);
+		this.studentDao = studentDao;
+	}
 
-	
-    
 	public ListWrapper<StudentView> getStudents(Map filters,
 			FilterInfo filterInfo) {
 		return studentDao.getStudents(filters, filterInfo);
 	}
-    
+
+	public StudentView getStudent(Long id) {
+		return studentDao.getStudent(id);
+	}
+
 }

@@ -14,7 +14,8 @@ import javax.jws.WebService;
 
 @WebService
 public interface StudentManager extends GenericManager<Student, Long> {
-	
-	public ListWrapper<StudentView> getStudents(Map filters,
-			FilterInfo filterInfo);
+
+	StudentView getStudent(Long id);
+
+	ListWrapper<StudentView> getStudents(Map filters, FilterInfo filterInfo);
 }

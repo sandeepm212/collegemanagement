@@ -262,7 +262,7 @@
         <column>created_on</column>
         <column>updated_on</column>
         <column>version</column>
-        <column>branch</column>
+        <column>name</column>
         <column>code</column>
         <column>description</column>
         <column>duration</column>
@@ -273,7 +273,7 @@
         <value description="created_on">2010-09-25</value>
         <value description="updated_on">2010-09-25</value>
         <value description="version">1</value>
-        <value description="branch">Electronics</value>
+        <value description="name">Electronics</value>
         <value description="code">EE</value>
         <value description="description">Electronics and communication</value>
         <value description="duration">4</value>
@@ -285,7 +285,7 @@
         <value description="created_on">2010-09-25</value>
         <value description="updated_on">2010-09-25</value>
         <value description="version">1</value>
-        <value description="branch">Information</value>
+        <value description="name">Information</value>
         <value description="code">IE</value>
         <value description="description">Information Technology</value>
         <value description="duration">4</value>
@@ -297,7 +297,7 @@
         <value description="created_on">2010-09-25</value>
         <value description="updated_on">2010-09-25</value>
         <value description="version">1</value>
-        <value description="branch">Computer Scince</value>
+        <value description="name">Computer Scince</value>
         <value description="code">CSE</value>
         <value description="description">DESC</value>
         <value description="duration">5</value>
@@ -527,7 +527,7 @@
         <column>suffix</column>
         <column>title</column>
     <row>
-        <value description="id">-1</value>
+        <value description="id">1</value>
         <value description="created_on">2010-09-26</value>
         <value description="updated_on">2010-09-26</value>
         <value description="version">1</value>
@@ -568,6 +568,36 @@
         <value description="owner_entity_id">3</value>
         <value description="owner_entity_type">3</value>
         <value description="person_type">0</value>
+        <value description="suffix">Mr</value>
+        <value description="title">8</value>
+    </row>
+    <row>
+        <value description="id">4</value>
+        <value description="created_on">2010-09-26</value>
+        <value description="updated_on">2010-09-26</value>
+        <value description="version">1</value>
+        <value description="display_name">Student3</value>
+        <value description="first_name">Mother FN</value>
+        <value description="last_name">Student3 LN</value>
+        <value description="middle_name">Student3 MN</value>
+        <value description="owner_entity_id">1</value>
+        <value description="owner_entity_type">3</value>
+        <value description="person_type">2</value>
+        <value description="suffix">Mr</value>
+        <value description="title">8</value>
+    </row>
+    <row>
+        <value description="id">5</value>
+        <value description="created_on">2010-09-26</value>
+        <value description="updated_on">2010-09-26</value>
+        <value description="version">1</value>
+        <value description="display_name">Student3</value>
+        <value description="first_name">Father FN</value>
+        <value description="last_name">Student3 LN</value>
+        <value description="middle_name">Student3 MN</value>
+        <value description="owner_entity_id">1</value>
+        <value description="owner_entity_type">3</value>
+        <value description="person_type">1</value>
         <value description="suffix">Mr</value>
         <value description="title">8</value>
     </row>

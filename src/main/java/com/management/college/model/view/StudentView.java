@@ -6,8 +6,12 @@ import java.util.List;
 import com.management.college.model.Address;
 import com.management.college.model.PersonName;
 import com.management.college.model.Phone;
+import org.apache.commons.lang.builder.ToStringBuilder;
+import org.apache.commons.lang.builder.ToStringStyle;
 
 public class StudentView {
+
+	Long id;
 
 	Long studentId;
 
@@ -32,6 +36,14 @@ public class StudentView {
 	Long courseId;
 
 	String courseName;
+
+	String courseCode;
+
+	Long courseGroupId;
+
+	String courseGroupName;
+
+	String courseGroupCode;
 
 	String gender;
 
@@ -121,6 +133,7 @@ public class StudentView {
 
 	public void setStudentId(Long studentId) {
 		this.studentId = studentId;
+		this.id = studentId;
 	}
 
 	public void setStudentName(PersonName studentName) {
@@ -198,4 +211,117 @@ public class StudentView {
 	public void setJoiningDateStr(String joiningDateStr) {
 		this.joiningDateStr = joiningDateStr;
 	}
+
+	public String getCourseCode() {
+		return this.courseCode;
+	}
+
+	public Long getCourseGroupId() {
+		return this.courseGroupId;
+	}
+
+	public String getCourseGroupName() {
+		return this.courseGroupName;
+	}
+
+	public String getCourseGroupCode() {
+		return this.courseGroupCode;
+	}
+
+	public void setCourseCode(String inputCourseCode) {
+		this.courseCode = inputCourseCode;
+	}
+
+	public void setCourseGroupId(Long inputCourseGroupId) {
+		this.courseGroupId = inputCourseGroupId;
+	}
+
+	public void setCourseGroupName(String inputCourseGroupName) {
+		this.courseGroupName = inputCourseGroupName;
+	}
+
+	public void setCourseGroupCode(String inputCourseGroupCode) {
+		this.courseGroupCode = inputCourseGroupCode;
+	}
+
+	public String getMotherFirstName() {
+		if (motherName != null) {
+			return motherName.getFirstName();
+		}
+		return "";
+	}
+
+	public String getMotherMiddleName() {
+		if (motherName != null) {
+			return motherName.getMiddleName();
+		}
+		return "";
+	}
+
+	public String getMotherLastName() {
+		if (motherName != null) {
+			return motherName.getLastName();
+		}
+		return "";
+	}
+
+	public String getFatherFirstName() {
+		if (fatherName != null) {
+			return fatherName.getFirstName();
+		}
+		return "";
+	}
+
+	public String getFatherMiddleName() {
+		if (fatherName != null) {
+			return fatherName.getMiddleName();
+		}
+		return "";
+	}
+
+	public String getFatherLastName() {
+		if (fatherName != null) {
+			return fatherName.getLastName();
+		}
+		return "";
+	}
+
+	/**
+	 * @see java.lang.Object#toString()
+	 */
+	public String toString() {
+		return new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE)
+				.append("addresses", this.addresses)
+				.append("gender", this.gender)
+				.append("studentId", this.studentId)
+				.append("courseGroupName", this.courseGroupName)
+				.append("courseName", this.courseName)
+				.append("motherName", this.motherName)
+				.append("religion", this.religion)
+				.append("joiningDateStr", this.joiningDateStr)
+				.append("nationality", this.nationality)
+				.append("phones", this.phones)
+				.append("courseGroupCode", this.courseGroupCode)
+				.append("dateOfBirth", this.dateOfBirth)
+				.append("courseCode", this.courseCode)
+				.append("registrationNumber", this.registrationNumber)
+				.append("studentName", this.studentName)
+				.append("fatherName", this.fatherName)
+				.append("courseId", this.courseId)
+				.append("admissionNumber", this.admissionNumber)
+				.append("bloodGroup", this.bloodGroup)
+				.append("currentYear", this.currentYear)
+				.append("joiningDate", this.joiningDate)
+				.append("identificationMarks", this.identificationMarks)
+				.append("courseGroupId", this.courseGroupId).toString();
+	}
+
+	public Long getId() {
+		return this.id;
+	}
+
+	public void setId(Long inputId) {
+		this.id = inputId;
+	}
+
 }

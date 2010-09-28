@@ -22,6 +22,7 @@ public class ListWrapper<T> {
 
 	public ListWrapper() {
 		startIndex = 1;
+		page = 1;
 	}
 
 	/**

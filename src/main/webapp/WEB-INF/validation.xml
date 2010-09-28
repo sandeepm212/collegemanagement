@@ -26,31 +26,7 @@
                 <arg0 key="uploadForm.file"/>
             </field>
         </form>
-        <!--Student-START-->
-        <form name="student">
-            <field property="createdOn" depends="required">
-                <arg0 key="student.createdOn"/>
-            </field>
-            <field property="updatedOn" depends="required">
-                <arg0 key="student.updatedOn"/>
-            </field>
-            <field property="entityType" depends="required">
-                <arg0 key="student.entityType"/>
-            </field>
-            <field property="gender" depends="required">
-                <arg0 key="student.gender"/>
-            </field>
-            <field property="joiningDate" depends="required">
-                <arg0 key="student.joiningDate"/>
-            </field>
-            <field property="nationality" depends="required">
-                <arg0 key="student.nationality"/>
-            </field>
-            <field property="studentId" depends="required">
-                <arg0 key="student.studentId"/>
-            </field>
-        </form>
-        <!--Student-END-->
+        
         
         <!--DecodeValue-START-->
         <form name="decodeValue">

@@ -1,5 +1,6 @@
 package com.management.college.dao;
 
+import com.management.college.AppConstants;
 import com.management.college.dao.BaseDaoTestCase;
 import com.management.college.model.PersonName;
 import org.springframework.dao.DataAccessException;
@@ -43,5 +44,11 @@ public class PersonNameDaoTest extends BaseDaoTestCase {
             log.debug("Expected exception: " + e.getMessage());
             assertNotNull(e);
         }
+    }
+    
+    public void testGetPersonsByOwner () throws Exception {
+    	List<PersonName> personNames = personNameDao.getPersonNamesByOwner (AppConstants.ENTITY_TYPE_CORE_STUDENT, 1L);
+    	System.out.println("\n\n==================\n\n");
+    	System.out.println(personNames);
     }
 }

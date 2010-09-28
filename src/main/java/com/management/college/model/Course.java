@@ -22,7 +22,7 @@ public class Course extends BaseObject {
 	/**
 	 * ECE
 	 */
-	private String branch;
+	private String name;
 
 	private String code;
 
@@ -51,9 +51,9 @@ public class Course extends BaseObject {
 		return group;
 	}
 
-	@Column(name = "branch", nullable = false)
-	public String getBranch() {
-		return branch;
+	@Column(name = "name", nullable = false)
+	public String getName() {
+		return name;
 	}
 
 	@Column(name = "code", nullable = false)
@@ -88,8 +88,8 @@ public class Course extends BaseObject {
 		this.group = group;
 	}
 
-	public void setBranch(String branch) {
-		this.branch = branch;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public void setCode(String code) {
@@ -118,7 +118,7 @@ public class Course extends BaseObject {
 	 */
 	public int hashCode() {
 		int result;
-		result = ((branch == null) ? 0 : branch.hashCode());
+		result = ((name == null) ? 0 : name.hashCode());
 		result = 29 * result + ((code == null) ? 0 : code.hashCode());
 		result = 29 * result + ((group == null) ? 0 : group.hashCode());
 		return result;

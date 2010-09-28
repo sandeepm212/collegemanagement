@@ -57,5 +57,17 @@ public class StudentDaoTest extends BaseDaoTestCase {
     	ListWrapper<StudentView> studentViewList = studentDao.getStudents(null, filterInfo);
     	System.out.println(studentViewList);
     	
+    	StudentView studentView = studentDao.getStudent(1L);
+		System.out.println("\n\n=======testGetStudent=========\n\n");
+		System.out.println(studentView);
+		System.out.println("\n\n================\n\n");
+    	
     }
+	
+	public void testGetStudentView(Long id) throws Exception {
+		StudentView studentView = studentDao.getStudent(1L);
+		System.out.println("\n\n=======testGetStudent=========\n\n");
+		System.out.println(studentView);
+		System.out.println("\n\n================\n\n");
+	}
 }
