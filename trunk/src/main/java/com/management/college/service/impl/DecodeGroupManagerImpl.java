@@ -26,11 +26,11 @@ public class DecodeGroupManagerImpl
 	public ListWrapper<DecodeGroup> getDecodeGroups(DecodeGroup decodeGroup, FilterInfo filterInfo) {
 		return getFilteredList(decodeGroup, filterInfo);
 	}
-
+	
 	public DecodeGroup getDecodeGroup(Long id) {
 		return get(id);
 	}
-
+	
 	public DecodeGroup saveDecodeGroup(DecodeGroup decodeGroup) {
 		Long id = decodeGroup.getId();
 		DecodeGroup dg = null;

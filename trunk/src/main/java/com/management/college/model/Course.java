@@ -8,10 +8,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 import javax.persistence.Transient;
 
-@Entity(name = "mgmt_course")
+@Entity
+@Table(name = "mgmt_course")
 public class Course extends BaseObject {
 
 	/*

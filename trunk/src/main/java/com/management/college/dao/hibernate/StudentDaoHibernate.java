@@ -25,10 +25,11 @@ public class StudentDaoHibernate extends GenericDaoHibernate<Student, Long>
 		super(Student.class);
 	}
 
-	private static final String STUDENTS_LIST_COLUMNS = "s.id AS student_id, pn.title, pn.first_name, pn.middle_name, pn.last_name, pn.suffix, "
+	private static final String STUDENTS_LIST_COLUMNS = "s.id AS id, pn.id AS student_name_id, pn.title as name_title, pn.first_name, pn.middle_name, pn.last_name, pn.suffix, "
 			+ "pn.display_name, pn.person_type, s.admission_number AS admission_number, s.blood_group AS blood_group, "
 			+ "s.current_year AS current_year, s.gender AS gender, s.identification_marks AS identification_marks, "
-			+ "s.joining_date AS joining_date, DATE_FORMAT(s.joining_date, '%m/%d/%Y') AS joining_date_str, s.nationality AS nationality, s.registration_number AS registration_number, "
+			+ "s.joining_date AS joining_date, DATE_FORMAT(s.joining_date, '%d/%m/%Y') AS joining_date_str, s.nationality AS nationality, s.registration_number AS registration_number, "
+			+ "s.date_of_birth AS date_of_birth, DATE_FORMAT(s.date_of_birth, '%d/%m/%Y') AS date_of_birth_str, "
 			+ "s.religion AS religion, s.student_id AS student_id, "
 			+ "s.course_id AS course_id, c.name AS course_name, c.code AS course_code, "
 			+ "dv.id AS course_group_id, dv.value AS course_group_name, dv.short_code AS course_group_code ";
@@ -114,7 +115,8 @@ public class StudentDaoHibernate extends GenericDaoHibernate<Student, Long>
 		PersonName studentName = new PersonName();
 
 		StudentView student = new StudentView();
-		student.setStudentId((Long) object[i]);i++;
+		student.setId((Long) object[i]);i++;
+		studentName.setId((Long) object[i]);i++;
 		studentName.setTitle((Long) object[i]);i++;
 		studentName.setFirstName((String) object[i]);i++;
 		studentName.setMiddleName((String) object[i]);i++;
@@ -133,7 +135,10 @@ public class StudentDaoHibernate extends GenericDaoHibernate<Student, Long>
 
 		student.setNationality((Long) object[i]);i++;
 		student.setRegistrationNumber((String) object[i]);i++;
+		student.setDateOfBirth((Date) object[i]);i++;
+		student.setDateOfBirthStr((String) object[i]);i++;
 		student.setReligion((Long) object[i]);i++;
+		student.setStudentId((String) object[i]);i++;
 		student.setCourseId((Long) object[i]);i++;
 		student.setCourseName((String) object[i]);i++;
 		student.setCourseCode((String) object[i]);i++;
@@ -147,8 +152,9 @@ public class StudentDaoHibernate extends GenericDaoHibernate<Student, Long>
 	}
 	
 	private void setQueryScalars (SQLQuery query) {
-		query.addScalar("student_id", Hibernate.LONG);
-		query.addScalar("title", Hibernate.LONG);
+		query.addScalar("id", Hibernate.LONG);
+		query.addScalar("student_name_id", Hibernate.LONG);
+		query.addScalar("name_title", Hibernate.LONG);
 		query.addScalar("first_name", Hibernate.STRING);
 		query.addScalar("middle_name", Hibernate.STRING);
 		query.addScalar("last_name", Hibernate.STRING);
@@ -164,7 +170,11 @@ public class StudentDaoHibernate extends GenericDaoHibernate<Student, Long>
 		query.addScalar("joining_date_str", Hibernate.STRING);
 		query.addScalar("nationality", Hibernate.LONG);
 		query.addScalar("registration_number", Hibernate.STRING);
+		query.addScalar("date_of_birth", Hibernate.TIMESTAMP);
+		query.addScalar("date_of_birth_str", Hibernate.STRING);
+		
 		query.addScalar("religion", Hibernate.LONG);
+		query.addScalar("student_id", Hibernate.STRING);
 		query.addScalar("course_id", Hibernate.LONG);
 		query.addScalar("course_name", Hibernate.STRING);
 		query.addScalar("course_code", Hibernate.STRING);

@@ -22,6 +22,8 @@ public class Student extends BaseObject {
 	int currentYear;
 
 	Date joiningDate;
+	
+	Date dateOfBirth;
 
 	String studentId;
 
@@ -103,6 +105,12 @@ public class Student extends BaseObject {
 	public String getIdentificationMarks() {
 		return this.identificationMarks;
 	}
+	
+	@Column(name = "date_of_birth")
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
 
 	@Transient
 	public int getEntityType() {
@@ -155,6 +163,10 @@ public class Student extends BaseObject {
 		this.identificationMarks = inputIdentificationMarks;
 	}
 
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
 	@Override
 	public String toString() {
 		return null;
@@ -169,5 +181,7 @@ public class Student extends BaseObject {
 	public int hashCode() {
 		return 0;
 	}
+
+
 
 }

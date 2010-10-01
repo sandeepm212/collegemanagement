@@ -19,5 +19,7 @@ public interface CourseManager extends GenericManager<Course, Long> {
 	public Course saveCourse(Course course);
 
 	public void removeCourse(Long id);
+	
+	public void setJSONDecodeGroups ();
 
 }

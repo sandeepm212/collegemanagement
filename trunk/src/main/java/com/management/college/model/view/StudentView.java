@@ -13,7 +13,7 @@ public class StudentView {
 
 	Long id;
 
-	Long studentId;
+	String studentId;
 
 	PersonName studentName;
 
@@ -24,6 +24,8 @@ public class StudentView {
 	int currentYear;
 
 	Date dateOfBirth;
+
+	String dateOfBirthStr;
 
 	Date joiningDate;
 
@@ -58,8 +60,14 @@ public class StudentView {
 	List<Address> addresses;
 
 	List<Phone> phones;
+	
+	public StudentView () {
+		studentName = new PersonName();
+		fatherName = new PersonName(PersonName.PN_TYPE_FATHER);
+		motherName = new PersonName(PersonName.PN_TYPE_MOTHER);
+	}
 
-	public Long getStudentId() {
+	public String getStudentId() {
 		return studentId;
 	}
 
@@ -131,9 +139,8 @@ public class StudentView {
 		return phones;
 	}
 
-	public void setStudentId(Long studentId) {
+	public void setStudentId(String studentId) {
 		this.studentId = studentId;
-		this.id = studentId;
 	}
 
 	public void setStudentName(PersonName studentName) {
@@ -322,6 +329,14 @@ public class StudentView {
 
 	public void setId(Long inputId) {
 		this.id = inputId;
+	}
+
+	public String getDateOfBirthStr() {
+		return dateOfBirthStr;
+	}
+
+	public void setDateOfBirthStr(String dateOfBirthStr) {
+		this.dateOfBirthStr = dateOfBirthStr;
 	}
 
 }
