@@ -7,7 +7,7 @@ var decodeValuesParent;
 // Decode Group Filters
 var dgFilterInfo = {
 	"startIndex": "0",
-	"numResults": "15",
+	"numResults": "5",
 	"sortColumn": "name",
 	"sortOrderAsc": "true"
 };
@@ -129,6 +129,8 @@ var valueDialogOptions = {
 function getDecodeGroups (flexigrid) {
 	dgFilterInfo.sortColumn = dgFlexigrid.p.sortname; 
 	dgFilterInfo.sortOrderAsc = dgFlexigrid.p.sortorder == "asc" ? true : false;
+	dgFilterInfo.startIndex = (parseInt(dgFlexigrid.p.newp) - 1) * parseInt(dgFlexigrid.p.rp);
+	
 	DWRDecodeGroupManager.getDecodeGroups(null, dgFilterInfo, function (data) {    		
 		flexigrid.addData(data);
 	});
@@ -275,7 +277,6 @@ function showDecodeValue (selectedTr) {
 
 var dgListCols = [
 	            {display: 'Name', name : 'name', width : 157, sortable : true, align: 'left'},
-	            {display: 'Code', name : 'code', width : 80, sortable : true, align: 'left'},
 	            {display: 'Description', name : 'description', width : 197, sortable : true, align: 'left'},
 	            {display: 'Menu', name : 'EDIT_LINK', width : 150, sortable : true, align: 'left'}
 	            ];
@@ -294,7 +295,7 @@ $("#decodeGroupsList").flexigrid ({
 	usepager: true,
 	singleSelect: true,
 	useRp: true,
-	rp: 15,
+	rp: 5,
 	width: dgCoListWidth,
 	resizable: false,
 	useRp: false,
