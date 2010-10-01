@@ -303,7 +303,7 @@ $("#decodeGroupsList").flexigrid ({
 			
 	},
 	editLink: function () {
-		return '<a href="javascript:void(0);" onclick="showDGEditForm(this);">Edit</a> | <a href="javascript:void(0);" onclick="showDecodeValues(this);">Show Group Values</a>';	
+		return '<a href="javascript:void(0);" onclick="showDecodeValues(this);">Show Group Values</a>';	
 	},
 	onSuccess: function() {
 		if ($("#deocdeGroupForm").is(":visible")) {

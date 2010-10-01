@@ -68,6 +68,7 @@
         <property name="formView" value="/student/studentform"/>
         <property name="successView" value="redirect:students.html"/>
         <property name="studentManager" ref="studentManager"/>
+        <property name="courseManager" ref="courseManager"/>
         <property name="commandClass" value="com.management.college.model.view.StudentView" />
         <property name="commandName" value="studentView" />
         <property name="validateOnBinding" value="false" />

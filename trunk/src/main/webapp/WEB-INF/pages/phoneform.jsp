@@ -3,7 +3,7 @@
 
 <div class="container container_32">
 	<div class="grid_7">
-		<select class="text" name="type" id="type">
+		<select class="text" name="" id="">
 			<option value="">Select One</option>
 			<c:if test="${not empty phone_type}">
 				<c:forEach var="dv" items="${phone_type}">
@@ -12,7 +12,7 @@
 			</c:if>
 		</select>
 	</div>
-	<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="dateOfBirth" id="dateOfBirth"></div>
+	<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="" id=""></div>
 	<div class="grid_7">
 		<div class="addEditAddLink fontLink" id="5:0:-4" title="Add a new Address for this contact">
 			<a onclick="YAHOO.addressbook.add_edit.cloneAndInsertRow(event, this)">+ Add Phone</a>

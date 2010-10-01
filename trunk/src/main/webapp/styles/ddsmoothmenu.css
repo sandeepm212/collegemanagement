@@ -8,6 +8,11 @@ background: #414141; /*background of menu bar (default state)*/
 width: 100%;
 }
 
+.ddsmoothmenu ul li a.active { 
+	background: #699C4D;
+	color: #fff;
+}
+
 .ddsmoothmenu ul{
 z-index:100;
 margin: 0;

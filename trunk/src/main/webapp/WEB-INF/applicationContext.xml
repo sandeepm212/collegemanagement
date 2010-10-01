@@ -78,6 +78,7 @@
     <!--CourseManager-START-->
     <bean id="courseManager" class="com.management.college.service.impl.CourseManagerImpl">
         <constructor-arg ref="courseDao"/>
+        <property name="decodeGroupDao" ref="decodeGroupDao"/>
     </bean>
     <!--CourseManager-END-->
 
