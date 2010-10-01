@@ -9,7 +9,7 @@
 	<div class="clear"></div>
 	
 	<div class="grid_7 tworow2">
-		<select name="title" class="text">
+		<select name="" class="text">
 			<option> - Select Your Title - </option>
 			<option value="Mr.">Mr.</option>
 			<option value="Mrs.">Mrs.</option>
@@ -18,15 +18,15 @@
 		    <option value="Other">Other</option>
 		</select>
 	</div>
-	<div class="grid_9 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="firstName" id="firstName"></div>
-	<div class="grid_7 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="middleName" id="middleName"></div>
-	<div class="grid_9 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="lastName" id="lastName"></div>
+	<div class="grid_9 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="" id=""></div>
+	<div class="grid_7 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="" id=""></div>
+	<div class="grid_9 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="" id=""></div>
 	<div class="clear"></div>
 	
 
 	<div class="grid_7"><label class="desc" for="group">Address Type</label></div>
 	<div class="grid_9">
-		<select class="text" name="type" id="type">
+		<select class="text" name="" id="">
 			<option value="">Select One</option>
 			<c:if test="${not empty address_type}">
 				<c:forEach var="dv" items="${address_type}">
@@ -36,18 +36,18 @@
 		</select>
 	</div>
 	<div class="grid_7"><label class="desc" for="group">Street</label></div>
-	<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="group" id="group"></div>
+	<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="" id=""></div>
 	
 	<div class="grid_7"><label class="desc" for="group">City</label></div>
-	<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="dateOfBirth" id="dateOfBirth"></div>
+	<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="" id=""></div>
 	<div class="grid_7"><label class="desc" for="group">State</label></div>
-	<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="admissionNumber" id="admissionNumber"></div>
+	<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="" id=""></div>
 	<div class="clear"></div>
 	
 	<div class="grid_7"><label class="desc" for="group">Postal/ZIP Code</label></div>
-	<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="bloodGroup" id="bloodGroup"></div>
+	<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="" id=""></div>
 	<div class="grid_7"><label class="desc" for="group">Country</label></div>
-	<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="gender" id="gender"></div>
+	<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="" id=""></div>
 	<div class="clear"></div>
 
 </div>

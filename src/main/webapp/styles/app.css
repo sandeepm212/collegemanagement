@@ -1,3 +1,7 @@
+select {
+	width: 162px;
+}
+
 .hidden {
 	display: none;
 }
@@ -58,12 +62,13 @@ label.error {
 	width:auto;
 }
 
-.success {
+.message, .success {
 	background-color: #003300;
 	color: #fff;
 	font-size: 14px;
 	padding: 5px; 
 }
+
 .hidden {
 	display: none;
 }

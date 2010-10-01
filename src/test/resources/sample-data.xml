@@ -131,6 +131,50 @@
         <value description="locked">0</value>
         <value description="name">Address Type</value>
     </row>
+    <row>
+        <value description="id">7</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="code">name_title</value>
+        <value description="description">Name Title</value>
+        <value description="enabled">1</value>
+        <value description="locked">0</value>
+        <value description="name">Name Title</value>
+    </row>
+    <row>
+        <value description="id">8</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="code">parent_name_title</value>
+        <value description="description">Parent Name Title</value>
+        <value description="enabled">1</value>
+        <value description="locked">0</value>
+        <value description="name">Parent Name Title</value>
+    </row>
+    <row>
+        <value description="id">9</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="code">blood_group</value>
+        <value description="description">Blood Group</value>
+        <value description="enabled">1</value>
+        <value description="locked">0</value>
+        <value description="name">Blood Group</value>
+    </row>
+    <row>
+        <value description="id">10</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="code">nationality</value>
+        <value description="description">Nationality</value>
+        <value description="enabled">1</value>
+        <value description="locked">0</value>
+        <value description="name">Nationality</value>
+    </row>
     </table>
     <!--DecodeGroup-END-->
     <!--DecodeValue-START-->
@@ -253,6 +297,274 @@
         <value description="short_code">Other</value>
         <value description="value">Other</value>
     </row>
+    
+    <!--  name_title Start -->		    
+    <row>
+        <value description="id">10</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">7</value>
+        <value description="description">Mr.</value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[Mr.]]></value>
+        <value description="value"><![CDATA[Mr.]]></value>
+    </row>
+    <row>
+        <value description="id">11</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">7</value>
+        <value description="description">Mrs.</value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[Mrs.]]></value>
+        <value description="value"><![CDATA[Mrs.]]></value>
+    </row>
+    <row>
+        <value description="id">12</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">7</value>
+        <value description="description"><![CDATA[Miss.]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[Miss.]]></value>
+        <value description="value"><![CDATA[Miss.]]></value>
+    </row>
+    <row>
+        <value description="id">13</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">7</value>
+        <value description="description"><![CDATA[Ms.]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[Ms.]]></value>
+        <value description="value"><![CDATA[Ms.]]></value>
+    </row>
+    <row>
+        <value description="id">14</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">7</value>
+        <value description="description"><![CDATA[Other]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[Other]]></value>
+        <value description="value"><![CDATA[Other]]></value>
+    </row>
+    <!--  name_title Start -->
+    
+    <!--  parent_name_title Start -->
+    <row>
+        <value description="id">15</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">8</value>
+        <value description="description"><![CDATA[Mr.]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[Mr.]]></value>
+        <value description="value"><![CDATA[Mr.]]></value>
+    </row>
+    <row>
+        <value description="id">16</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">8</value>
+        <value description="description"><![CDATA[Mrs.]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[Mrs.]]></value>
+        <value description="value"><![CDATA[Mrs.]]></value>
+    </row>
+    <row>
+        <value description="id">17</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">8</value>
+        <value description="description"><![CDATA[Miss.]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[Miss.]]></value>
+        <value description="value"><![CDATA[Miss.]]></value>
+    </row>
+    <row>
+        <value description="id">18</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">8</value>
+        <value description="description"><![CDATA[Ms.]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[Ms.]]></value>
+        <value description="value"><![CDATA[Ms.]]></value>
+    </row>
+    <row>
+        <value description="id">19</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">8</value>
+        <value description="description"><![CDATA[Dr.]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[Dr.]]></value>
+        <value description="value"><![CDATA[Dr.]]></value>
+    </row>
+    <row>
+        <value description="id">20</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">8</value>
+        <value description="description"><![CDATA[Other]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[Other]]></value>
+        <value description="value"><![CDATA[Other]]></value>
+    </row>
+    <!--  parent_name_title Start -->
+    
+    
+    <!-- blood_group Start -->
+    
+    <row>
+        <value description="id">21</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">9</value>
+        <value description="description"><![CDATA[O+]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[O+]]></value>
+        <value description="value"><![CDATA[O+]]></value>
+    </row>
+    <row>
+        <value description="id">22</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">9</value>
+        <value description="description"><![CDATA[A+]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[A+]]></value>
+        <value description="value"><![CDATA[A+]]></value>
+    </row>
+    <row>
+        <value description="id">23</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">9</value>
+        <value description="description"><![CDATA[B+]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[B+]]></value>
+        <value description="value"><![CDATA[B+]]></value>
+    </row>
+    <row>
+        <value description="id">24</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">9</value>
+        <value description="description"><![CDATA[AB+]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[AB+]]></value>
+        <value description="value"><![CDATA[AB+]]></value>
+    </row>
+    <row>
+        <value description="id">25</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">9</value>
+        <value description="description"><![CDATA[O-]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[O-]]></value>
+        <value description="value"><![CDATA[O-]]></value>
+    </row>
+    <row>
+        <value description="id">26</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">9</value>
+        <value description="description"><![CDATA[A-]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[A-]]></value>
+        <value description="value"><![CDATA[A-]]></value>
+    </row>
+    <row>
+        <value description="id">27</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">9</value>
+        <value description="description"><![CDATA[B-]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[B-]]></value>
+        <value description="value"><![CDATA[B-]]></value>
+    </row>
+    <row>
+        <value description="id">28</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">9</value>
+        <value description="description"><![CDATA[AB-]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[AB-]]></value>
+        <value description="value"><![CDATA[AB-]]></value>
+    </row>
+    <!-- blood_group end -->
+    
+    <!-- nationality start -->
+    <row>
+        <value description="id">29</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">10</value>
+        <value description="description"><![CDATA[Indian]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[Indian]]></value>
+        <value description="value"><![CDATA[Indian]]></value>
+    </row>
+    <row>
+        <value description="id">30</value>
+        <value description="created_on">2010-09-18</value>
+        <value description="updated_on">2010-09-18</value>
+        <value description="version">1</value>
+        <value description="decode_group_id">10</value>
+        <value description="description"><![CDATA[Other]]></value>
+        <value description="display_order">6</value>
+        <value description="enabled">1</value>
+        <value description="short_code"><![CDATA[Other]]></value>
+        <value description="value"><![CDATA[Other]]></value>
+    </row>
+    <!-- nationality end -->
+    
+    
     </table>
     <!--DecodeValue-END-->
     
@@ -277,7 +589,7 @@
         <value description="code">EE</value>
         <value description="description">Electronics and communication</value>
         <value description="duration">4</value>
-        <value description="group_id">4</value>
+        <value description="group_id">1</value>
         <value description="intake">125</value>
     </row>
     <row>
@@ -289,7 +601,7 @@
         <value description="code">IE</value>
         <value description="description">Information Technology</value>
         <value description="duration">4</value>
-        <value description="group_id">5</value>
+        <value description="group_id">2</value>
         <value description="intake">199</value>
     </row>
     <row>
@@ -301,7 +613,7 @@
         <value description="code">CSE</value>
         <value description="description">DESC</value>
         <value description="duration">5</value>
-        <value description="group_id">6</value>
+        <value description="group_id">3</value>
         <value description="intake">500</value>
     </row>
     </table>
@@ -323,6 +635,7 @@
         <column>registration_number</column>
         <column>religion</column>
         <column>student_id</column>
+        <column>date_of_birth</column>
     <row>
         <value description="id">1</value>
         <value description="created_on">2010-09-17</value>
@@ -339,6 +652,7 @@
         <value description="registration_number">345666</value>
         <value description="religion">1</value>
         <value description="student_id">45665</value>
+        <value description="date_of_birth">1995-09-17</value>
     </row>
     <row>
         <value description="id">2</value>
@@ -356,6 +670,7 @@
         <value description="registration_number">39845</value>
         <value description="religion">2</value>
         <value description="student_id">38475987</value>
+        <value description="date_of_birth">1995-09-17</value>
     </row>
     <row>
         <value description="id">3</value>
@@ -373,6 +688,7 @@
         <value description="registration_number">2374</value>
         <value description="religion">2</value>
         <value description="student_id">93847</value>
+        <value description="date_of_birth">1995-09-17</value>
     </row>
     </table>
     <!--Student-END-->
@@ -539,7 +855,7 @@
         <value description="owner_entity_type">3</value>
         <value description="person_type">0</value>
         <value description="suffix">Mr</value>
-        <value description="title">8</value>
+        <value description="title">10</value>
     </row>
     <row>
         <value description="id">2</value>
@@ -554,7 +870,7 @@
         <value description="owner_entity_type">3</value>
         <value description="person_type">0</value>
         <value description="suffix">Mr</value>
-        <value description="title">8</value>
+        <value description="title">11</value>
     </row>
     <row>
         <value description="id">3</value>
@@ -569,7 +885,7 @@
         <value description="owner_entity_type">3</value>
         <value description="person_type">0</value>
         <value description="suffix">Mr</value>
-        <value description="title">8</value>
+        <value description="title">12</value>
     </row>
     <row>
         <value description="id">4</value>
@@ -584,7 +900,7 @@
         <value description="owner_entity_type">3</value>
         <value description="person_type">2</value>
         <value description="suffix">Mr</value>
-        <value description="title">8</value>
+        <value description="title">13</value>
     </row>
     <row>
         <value description="id">5</value>
@@ -599,7 +915,7 @@
         <value description="owner_entity_type">3</value>
         <value description="person_type">1</value>
         <value description="suffix">Mr</value>
-        <value description="title">8</value>
+        <value description="title">10</value>
     </row>
     </table>
     <!--PersonName-END-->

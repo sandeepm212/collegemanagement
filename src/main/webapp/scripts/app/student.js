@@ -55,8 +55,18 @@ $("#studentsList").flexigrid ({
 		if ($("#deocdeGroupForm").is(":visible")) {
 			$("#decodeGroupsList #row" + $("#decodeGroupId").val()).addClass("trSelected");	
 		}
-	}
+	},
+	buttons : [
+	           {name: 'Add Student', bclass: 'add', onpress : studentGridButtonPress},
+	           {separator: true}
+	           ]
 });
+
+function studentGridButtonPress (com, grid) {
+	if (com == 'Add Student') {
+		location.href = "/studentform.html";
+	}
+}
 
 function showStudentEditForm(aEle) {
 	var selectedTr= $(aEle).parents("tr:first");	
