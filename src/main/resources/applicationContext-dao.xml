@@ -18,6 +18,17 @@
             <!-- Turn batching off for better error messages under PostgreSQL -->
             <!-- hibernate.jdbc.batch_size=0 -->
         </property>
+        
+        <!-- Registering Spring's IdTransferringMergeEventListener 
+        	if you would like to have newly assigned ids transferred to the original object graph too
+        	when HibernateTemplate.merge(object) is used for saving.--> 
+        <property name="eventListeners">  
+            <map>  
+            	<entry key="merge">  
+                	<bean class="org.springframework.orm.hibernate3.support.IdTransferringMergeEventListener"/>  
+                </entry>  
+        	</map>  
+        </property>
     </bean>
 
     <!-- Transaction manager for a single Hibernate SessionFactory (alternative to JTA) -->

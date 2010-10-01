@@ -21,6 +21,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 import com.management.college.Constants;
 import com.management.college.DecodeConstants;
 import com.management.college.model.DecodeValue;
+import com.management.college.service.CourseManager;
 import com.management.college.service.DecodeGroupManager;
 import com.management.college.service.LookupManager;
 
@@ -120,6 +121,10 @@ public class StartupListener implements ServletContextListener {
 				.getDecodeValuesByGroup(DecodeConstants.DG_CODE_COURSE_GROUP);
 		context.setAttribute(DecodeConstants.CTX_DG_COURSE_GROUP,
 				courseGroupValues);
+		
+		CourseManager courseManager = (CourseManager) ctx
+		.getBean("courseManager");
+		courseManager.setJSONDecodeGroups();
 
 		List<DecodeValue> addressValues = decodeGroupManager
 				.getDecodeValuesByGroup(DecodeConstants.DG_CODE_ADDRESS_TYPE);
@@ -130,6 +135,20 @@ public class StartupListener implements ServletContextListener {
 				.getDecodeValuesByGroup(DecodeConstants.DG_CODE_PHONE_TYPE);
 		context.setAttribute(DecodeConstants.CTX_DG_PHONE_TYPE,
 				phoneValues);
+		
+		List<DecodeValue> bloodGroupValues = decodeGroupManager
+				.getDecodeValuesByGroup(DecodeConstants.DG_CODE_BLOOD_GROUP);
+		context.setAttribute(DecodeConstants.CTX_DG_BLOOD_GROUP, bloodGroupValues);
+		
+		List<DecodeValue> nationalityValues = decodeGroupManager
+				.getDecodeValuesByGroup(DecodeConstants.DG_CODE_NATIONALITY);
+		context.setAttribute(DecodeConstants.CTX_DG_NATIONALITY,
+				nationalityValues);
+		
+		List<DecodeValue> nameTitleValues = decodeGroupManager
+				.getDecodeValuesByGroup(DecodeConstants.DG_CODE_NAME_TITLE);
+		context.setAttribute(DecodeConstants.CTX_DG_NAME_TITLE,
+				nameTitleValues);
 
 		// get list of possible roles
 		context.setAttribute(Constants.AVAILABLE_ROLES, mgr.getAllRoles());

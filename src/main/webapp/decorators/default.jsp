@@ -10,8 +10,8 @@
 		<link rel="stylesheet" type="text/css" media="all" href="<c:url value='/styles/calendar-aqua/theme.css'/>" />
         <link rel="stylesheet" type="text/css" media="print" href="<c:url value='/styles/${appConfig["csstheme"]}/print.css'/>" />
         <link rel="stylesheet" type="text/css" media="all" href="<c:url value='/styles/ui-lightness/jquery-ui-1.8.5.custom.css'/>" />
-        <link rel="stylesheet" type="text/css" media="all" href="<c:url value='/styles/app.css'/>" />
         <link rel="stylesheet" type="text/css" media="all" href="<c:url value='/styles/ddsmoothmenu.css'/>" />
+        <link rel="stylesheet" type="text/css" media="all" href="<c:url value='/styles/app.css'/>" />
         <link rel="stylesheet" type="text/css" media="all" href="<c:url value='/styles/template-style.css'/>" />
         <link rel="stylesheet" type="text/css" media="all" href="<c:url value='/styles/960gs/grid.css'/>" />
 
