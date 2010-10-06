@@ -70,6 +70,8 @@ public class PersonName extends BaseObject implements Serializable {
 	 */
 	private String displayName;
 
+	private String occupation;
+
 	/*
 	 * The objectType of the object to which this contact belongs. This contains
 	 * one of the defined ENTITY_TYPE constants and is used in combination with
@@ -89,9 +91,9 @@ public class PersonName extends BaseObject implements Serializable {
 
 	public PersonName() {
 	}
-	
+
 	public PersonName(int personType) {
-		
+
 	}
 
 	/*
@@ -210,7 +212,7 @@ public class PersonName extends BaseObject implements Serializable {
 	public int getOwnerEntityType() {
 		return ownerEntityType;
 	}
-	
+
 	@Column(name = "person_type", nullable = false)
 	public int getPersonType() {
 		return personType;
@@ -226,12 +228,19 @@ public class PersonName extends BaseObject implements Serializable {
 	public long getOwnerEntityId() {
 		return ownerEntityId;
 	}
+	
+
+	@Column(name = "occupation")
+	public String getOccupation() {
+		return occupation;
+	}
 
 	@Override
 	@Transient
 	public final int getEntityType() {
 		return AppConstants.ENTITY_TYPE_CONTACT_PERSON_NAME;
 	}
+	
 
 	// ---------- Setters
 	/**
@@ -310,6 +319,12 @@ public class PersonName extends BaseObject implements Serializable {
 	public void setOwnerEntityId(final long ownerEntityId) {
 		this.ownerEntityId = ownerEntityId;
 	}
+	
+
+
+	public void setOccupation(String occupation) {
+		this.occupation = occupation;
+	}
 
 	/*
 	 * (non-Javadoc)
@@ -367,4 +382,5 @@ public class PersonName extends BaseObject implements Serializable {
 	public void setPersonType(int personType) {
 		this.personType = personType;
 	}
+
 }

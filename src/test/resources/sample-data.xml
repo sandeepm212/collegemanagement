@@ -933,7 +933,7 @@
     	</row>
     	<row>
     		<value description="table_name">mgmt_decode_value</value>
-    		<value description="next_id">15</value>
+    		<value description="next_id">100</value>
     	</row>
     	<row>
     		<value description="table_name">mgmt_person_name</value>

@@ -14,8 +14,8 @@
 	</div>
 	<div class="grid_9"><input type="text" maxlength="255" value="" class="text medium" name="" id=""></div>
 	<div class="grid_7">
-		<div class="addEditAddLink fontLink" id="5:0:-4" title="Add a new Address for this contact">
-			<a onclick="YAHOO.addressbook.add_edit.cloneAndInsertRow(event, this)">+ Add Phone</a>
+		<div class="addEditAddLink fontLink" id="5:0:-4" title="Add a new Phone for this contact">
+			<a onclick="cloneAndInsertRow(this)">+ Add Phone</a>
 		</div>
 	</div>
 	<div class="clear"></div>
