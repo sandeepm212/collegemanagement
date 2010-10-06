@@ -73,6 +73,8 @@
         <property name="commandName" value="studentView" />
         <property name="validateOnBinding" value="false" />
         <property name="personNameManager" ref="personNameManager"/>
+        <property name="addressManager" ref="addressManager"/>
+        <property name="phoneManager" ref="phoneManager"/>
     </bean>
     <!--Student-END-->    
 

@@ -6,9 +6,4 @@
     <meta name="menu" content="MainMenu"/>
 </head>
 
-<img src="<c:url value="/images/sms/Students-3.jpg"/>" >
-
-
-
-<div class="separator"></div>
-
+<img src="<c:url value="/images/sms/Students-3.jpg"/>" style="max-height: 400px;">

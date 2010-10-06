@@ -19,29 +19,31 @@ import com.management.college.AppConstants;
 @Entity(name = "mgmt_student")
 public class Student extends BaseObject {
 
-	int currentYear;
+	int		currentYear;
 
-	Date joiningDate;
-	
-	Date dateOfBirth;
+	Date	joiningDate;
 
-	String studentId;
+	Date	dateOfBirth;
 
-	String registrationNumber;
+	String	studentId;
 
-	String admissionNumber;
+	String	registrationNumber;
 
-	Course course;
+	String	admissionNumber;
 
-	String gender;
+	Course	course;
 
-	Long nationality;
+	String	gender;
 
-	Long religion;
+	Long	nationality;
 
-	Long bloodGroup;
+	Long	religion;
 
-	String identificationMarks;
+	Long	cast;
+
+	Long	bloodGroup;
+
+	String	identificationMarks;
 
 	@TableGenerator(name = "address_id_gen", table = "mgmt_id_table", pkColumnName = "table_name", valueColumnName = "next_id", initialValue = 1, allocationSize = 1)
 	@Id
@@ -96,6 +98,11 @@ public class Student extends BaseObject {
 		return this.religion;
 	}
 
+	@Column(name = "cast")
+	public Long getCast() {
+		return cast;
+	}
+
 	@Column(name = "blood_group")
 	public Long getBloodGroup() {
 		return this.bloodGroup;
@@ -105,12 +112,11 @@ public class Student extends BaseObject {
 	public String getIdentificationMarks() {
 		return this.identificationMarks;
 	}
-	
+
 	@Column(name = "date_of_birth")
 	public Date getDateOfBirth() {
 		return dateOfBirth;
 	}
-
 
 	@Transient
 	public int getEntityType() {
@@ -167,6 +173,10 @@ public class Student extends BaseObject {
 		this.dateOfBirth = dateOfBirth;
 	}
 
+	public void setCast(Long cast) {
+		this.cast = cast;
+	}
+
 	@Override
 	public String toString() {
 		return null;
@@ -181,7 +191,5 @@ public class Student extends BaseObject {
 	public int hashCode() {
 		return 0;
 	}
-
-
 
 }

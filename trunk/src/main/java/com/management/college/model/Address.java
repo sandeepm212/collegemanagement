@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 import javax.persistence.Transient;
 
@@ -19,6 +20,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
 
 import com.management.college.AppConstants;
+
 /**
  * This class is used to represent an address with address, city, province and
  * postal-code information. This stores the person information in the related
@@ -26,81 +28,82 @@ import com.management.college.AppConstants;
  * 
  * @author <a href="mailto:sandeep.mandrumaka@gmail.com">Sandeep M</a>
  */
-@Entity(name = "mgmt_address")
+@Entity
+@Table(name = "mgmt_address")
 public class Address extends BaseObject implements Serializable {
-	private static final long serialVersionUID = 3617859655330969141L;
+	private static final long	serialVersionUID	= 3617859655330969141L;
 
 	/*
 	 * The type of the address. This is a decode value selected from an user
 	 * defined list.
 	 */
-	private long addressType;
-		
+	private long				addressType;
+
 	/*
 	 * If this is true, this is the primary address in the set of addresses that
 	 * belong to the same owner.
 	 */
-	private boolean primaryAddress;
+	private boolean				primaryAddress;
 
 	/*
 	 * The street component of the address.
 	 */
-	private String street;
+	private String				street;
 
 	/*
 	 * The city component of the address.
 	 */
-	private String city;
+	private String				city;
 
 	/*
 	 * The state or province component of the address.
 	 */
-	private String stateOrProvince;
+	private String				stateOrProvince;
 
 	/*
 	 * The zip or postal code of the address.
 	 */
-	private String postalCode;
+	private String				postalCode;
 
 	/*
 	 * The country component of the address. This will be a 2-letter code.
 	 */
-	private String country;
+	private String				country;
 
 	/*
 	 * The position at which this object will be displayed in a list of
 	 * siblings.
 	 */
-	private int displayOrder;
+	private int					displayOrder;
 
 	/*
 	 * This is true if the Address is currently enabled and available for use.
 	 */
-	private boolean enabled;
+	private boolean				enabled;
 
 	/*
 	 * The random value of the address.
 	 */
-	private String uniqueCode;
+	private String				uniqueCode;
 
 	/*
 	 * The id of the object to which this Address belongs.
 	 */
-	private long ownerEntityId;
+	private long				ownerEntityId;
 
 	/*
 	 * The objectType of the object to which this Address belongs. This contains
 	 * one of the defined ENTITY_TYPE constants and is used in combination with
 	 * the entityId to retrieve this address from persistence.
 	 */
-	private int ownerEntityType;
+	private int					ownerEntityType;
 
 	/**
 	 * Default constructor - creates a new instance with no values set.
 	 */
 	public Address() {
 	}
-	
+
 	@TableGenerator(name = "address_id_gen", table = "mgmt_id_table", pkColumnName = "table_name", valueColumnName = "next_id", initialValue = 1, allocationSize = 1)
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE, generator = "address_id_gen")
@@ -360,8 +363,7 @@ public class Address extends BaseObject implements Serializable {
 	public int hashCode() {
 		int result;
 		result = (city != null ? city.hashCode() : 0);
-		result = 29 * result
-				+ (stateOrProvince != null ? stateOrProvince.hashCode() : 0);
+		result = 29 * result + (stateOrProvince != null ? stateOrProvince.hashCode() : 0);
 		result = 29 * result + (country != null ? country.hashCode() : 0);
 		result = 29 * result + (postalCode != null ? postalCode.hashCode() : 0);
 		return result;
@@ -373,12 +375,10 @@ public class Address extends BaseObject implements Serializable {
 	 * @return a String representation of this class.
 	 */
 	public String toString() {
-		return new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE)
-				.append("id", this.id).append("country", this.country)
-				.append("stateOrProvince", this.stateOrProvince)
-				.append("postalCode", this.postalCode)
-				.append("city", this.city).append("enabled", this.enabled)
-				.append("displayOrder", this.displayOrder)
+		return new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE).append("id", this.id)
+				.append("country", this.country).append("stateOrProvince", this.stateOrProvince)
+				.append("postalCode", this.postalCode).append("city", this.city)
+				.append("enabled", this.enabled).append("displayOrder", this.displayOrder)
 				.append("uniqueCode", this.uniqueCode).toString();
 	}
 }

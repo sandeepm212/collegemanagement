@@ -1,13 +1,17 @@
 package com.management.college.model.view;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import org.apache.commons.collections.FactoryUtils;
+import org.apache.commons.collections.ListUtils;
+import org.apache.commons.lang.builder.ToStringBuilder;
+import org.apache.commons.lang.builder.ToStringStyle;
 
 import com.management.college.model.Address;
 import com.management.college.model.PersonName;
 import com.management.college.model.Phone;
-import org.apache.commons.lang.builder.ToStringBuilder;
-import org.apache.commons.lang.builder.ToStringStyle;
 
 public class StudentView {
 
@@ -59,12 +63,21 @@ public class StudentView {
 
 	List<Address> addresses;
 
+	List<PersonName> addressNames;
+
 	List<Phone> phones;
-	
-	public StudentView () {
+
+	public StudentView() {
 		studentName = new PersonName();
 		fatherName = new PersonName(PersonName.PN_TYPE_FATHER);
 		motherName = new PersonName(PersonName.PN_TYPE_MOTHER);
+
+		addresses = ListUtils.lazyList(new ArrayList<Address>(5),
+				FactoryUtils.instantiateFactory(Address.class));
+		addressNames = ListUtils.lazyList(new ArrayList<PersonName>(5),
+				FactoryUtils.instantiateFactory(PersonName.class));
+		phones = ListUtils.lazyList(new ArrayList<Phone>(5),
+				FactoryUtils.instantiateFactory(Phone.class));
 	}
 
 	public String getStudentId() {
@@ -138,6 +151,58 @@ public class StudentView {
 	public List<Phone> getPhones() {
 		return phones;
 	}
+
+	public String getDateOfBirthStr() {
+		return dateOfBirthStr;
+	}
+
+	public List<PersonName> getAddressNames() {
+		return addressNames;
+	}
+
+	public String getMotherFirstName() {
+		if (motherName != null) {
+			return motherName.getFirstName();
+		}
+		return "";
+	}
+
+	public String getMotherMiddleName() {
+		if (motherName != null) {
+			return motherName.getMiddleName();
+		}
+		return "";
+	}
+
+	public String getMotherLastName() {
+		if (motherName != null) {
+			return motherName.getLastName();
+		}
+		return "";
+	}
+
+	public String getFatherFirstName() {
+		if (fatherName != null) {
+			return fatherName.getFirstName();
+		}
+		return "";
+	}
+
+	public String getFatherMiddleName() {
+		if (fatherName != null) {
+			return fatherName.getMiddleName();
+		}
+		return "";
+	}
+
+	public String getFatherLastName() {
+		if (fatherName != null) {
+			return fatherName.getLastName();
+		}
+		return "";
+	}
+
+	// -----------
 
 	public void setStudentId(String studentId) {
 		this.studentId = studentId;
@@ -251,46 +316,20 @@ public class StudentView {
 		this.courseGroupCode = inputCourseGroupCode;
 	}
 
-	public String getMotherFirstName() {
-		if (motherName != null) {
-			return motherName.getFirstName();
-		}
-		return "";
+	public Long getId() {
+		return this.id;
 	}
 
-	public String getMotherMiddleName() {
-		if (motherName != null) {
-			return motherName.getMiddleName();
-		}
-		return "";
+	public void setId(Long inputId) {
+		this.id = inputId;
 	}
 
-	public String getMotherLastName() {
-		if (motherName != null) {
-			return motherName.getLastName();
-		}
-		return "";
+	public void setDateOfBirthStr(String dateOfBirthStr) {
+		this.dateOfBirthStr = dateOfBirthStr;
 	}
 
-	public String getFatherFirstName() {
-		if (fatherName != null) {
-			return fatherName.getFirstName();
-		}
-		return "";
-	}
-
-	public String getFatherMiddleName() {
-		if (fatherName != null) {
-			return fatherName.getMiddleName();
-		}
-		return "";
-	}
-
-	public String getFatherLastName() {
-		if (fatherName != null) {
-			return fatherName.getLastName();
-		}
-		return "";
+	public void setAddressNames(List<PersonName> addressNames) {
+		this.addressNames = addressNames;
 	}
 
 	/**
@@ -322,21 +361,4 @@ public class StudentView {
 				.append("identificationMarks", this.identificationMarks)
 				.append("courseGroupId", this.courseGroupId).toString();
 	}
-
-	public Long getId() {
-		return this.id;
-	}
-
-	public void setId(Long inputId) {
-		this.id = inputId;
-	}
-
-	public String getDateOfBirthStr() {
-		return dateOfBirthStr;
-	}
-
-	public void setDateOfBirthStr(String dateOfBirthStr) {
-		this.dateOfBirthStr = dateOfBirthStr;
-	}
-
 }

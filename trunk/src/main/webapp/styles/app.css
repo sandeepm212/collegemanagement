@@ -52,7 +52,7 @@ label.error {
 
 em { 
 	font-weight: bold; 
-	padding-right: 1em; 
+	padding: 0px 1em; 
 	vertical-align: top;
 	font-size: 1em;  
 }

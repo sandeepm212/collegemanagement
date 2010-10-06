@@ -118,10 +118,6 @@ public class CourseManagerImpl extends GenericManagerImpl<Course, Long>
 				coursesJsonArray.add(c1);
 			}
 		}
-		System.out.println("\n\n================\n\n");
-		System.out.println(groupsJsonArray);
-		System.out.println(coursesJsonArray);
-		System.out.println("\n\n================\n\n");
 		servletContext.setAttribute("course_groups_json", groupsJsonArray);
 		servletContext.setAttribute("courses_json", coursesJsonArray);
 	}
