@@ -24,6 +24,10 @@ input, .text {
 	border: 1px solid #699C4D;	
 }
 
+input[type=checkbox], input[type=radio] {
+	border: 0px;
+}
+
 .grid_7, .grid_9 {
 	padding: 5px 0px;	
 }
@@ -46,13 +50,12 @@ label.error {
 }
 
 .req {
-    color: #cc0000 !important;
-    float: right;
+    color: #cc0000 !important;    
 }
 
 em { 
 	font-weight: bold; 
-	padding: 0px 1em; 
+	padding: 0px 0.5em; 
 	vertical-align: top;
 	font-size: 1em;  
 }
@@ -83,16 +86,14 @@ h1.pageHeading {
 }
 
 .artzBtnLinks { 
-	-moz-border-radius:2.5px; 
-	border-radius:2.5px; 
-	cursor:pointer; 
-	font:bold 12px Tahoma,Arial,sans-serif !important; 
-	border:solid 1px #003300 !important; 
-	color:#fff !important; 
+	-moz-border-radius: 2.5px; 
+	border-radius: 2.5px; 
+	cursor: pointer; 
+	font: bold 12px Tahoma,Arial,sans-serif !important; 
+	border: solid 1px #003300 !important; 
+	color: #fff !important; 
 	background-color:#699C4D; 
-	filter:progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#FCFEFE,endColorStr=#D7E8F4); 
 	padding: 5px;	
-	_padding: 5px;	
 	margin: 8px 2px;
 }
 
@@ -116,4 +117,10 @@ h1.pageHeading {
 
 a {
    outline: none;
+}
+
+.addEditAddLink {
+	font-size:0.85em;
+	line-height:0.814em;
+	color:#0081C2 !important;
 }
