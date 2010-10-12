@@ -714,7 +714,7 @@
         <column>street</column>
         <column>unique_code</column>
     <row>
-        <value description="id">-1</value>
+        <value description="id">1</value>
         <value description="created_on">2010-09-26</value>
         <value description="updated_on">2010-09-26</value>
         <value description="version">1</value>
@@ -732,7 +732,7 @@
         <value description="unique_code">UU</value>
     </row>
     <row>
-        <value description="id">-2</value>
+        <value description="id">2</value>
         <value description="created_on">2010-09-26</value>
         <value description="updated_on">2010-09-26</value>
         <value description="version">1</value>
@@ -750,7 +750,7 @@
         <value description="unique_code">UC</value>
     </row>
     <row>
-        <value description="id">-3</value>
+        <value description="id">3</value>
         <value description="created_on">2010-09-26</value>
         <value description="updated_on">2010-09-26</value>
         <value description="version">1</value>

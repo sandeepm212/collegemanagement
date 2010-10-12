@@ -2,26 +2,28 @@
 
 <div class="container container_32">
 	
-	<div class="grid_7 tworow1"><label class="desc" for="Title">Title</label></div>
-	<div class="grid_9 tworow1"><label class="desc" for="Title">First Name</label></div>
-	<div class="grid_7 tworow1"><label class="desc" for="Title">Middle Name</label></div>
+	<div class="grid_7 tworow1">&nbsp;</div>
+	<div class="grid_9 tworow1"><label class="desc" for="Title">Title</label></div>
+	<div class="grid_7 tworow1"><label class="desc" for="Title">First Name</label></div>
 	<div class="grid_9 tworow1"><label class="desc" for="Title">Last Name</label></div>
 	<div class="clear"></div>
 	
 	<div class="grid_7 tworow2">
-		<select name="addressNames[0].title" class="text">
+		<label class="desc" for="Title">Contact Name</label>
+	</div>
+	<div class="grid_9 tworow2">
+		<select name="addresses[0].personName.title" class="text">
 			<option value=""> -Select One- </option>
 			<c:if test="${not empty name_title}">
 				<c:forEach var="dv" items="${name_title}">
 				<option value="<c:out value="${dv.id}" />" 
-				<c:if test="${dv.id eq studentView.studentName.title}">selected="selected"</c:if>><c:out value="${dv.value}" /></option>
+				><c:out value="${dv.value}" /></option>
 				</c:forEach>
 			</c:if>
 		</select>
 	</div>
-	<div class="grid_9 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="addressNames[0].firstName" id=""></div>
-	<div class="grid_7 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="addressNames[0].middleName" id=""></div>
-	<div class="grid_9 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="addressNames[0].lastName" id=""></div>
+	<div class="grid_7 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="addresses[0].personName.firstName" id=""></div>
+	<div class="grid_9 tworow2"><input type="text" maxlength="255" value="" class="text medium" name="addresses[0].personName.lastName" id=""></div>
 	<div class="clear"></div>
 	
 
