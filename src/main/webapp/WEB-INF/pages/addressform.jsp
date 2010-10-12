@@ -72,8 +72,8 @@
 
 </div>
 
-<div class="addEditAddLink fontLink" id="5:0:-4" title="Add a new Address for this contact">
-	<a onclick="cloneAndInsertRow(this)">+ Add Address</a>
+<div class="fontLink" title="Add a new Address for this contact">
+	<a class="addEditAddLink" onclick="cloneAndInsertRow(this)">+ Add Address</a>
 </div>
 
 <script type="text/javascript">

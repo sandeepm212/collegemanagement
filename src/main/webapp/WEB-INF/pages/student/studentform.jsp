@@ -22,7 +22,7 @@
 		<div class="grid_7 tworow1"><label class="desc" for="Title">Title</label></div>
 		<div class="grid_9 tworow1"><label class="desc" for="Title">First Name</label></div>
 		<div class="grid_7 tworow1"><label class="desc" for="Title">Middle Name</label></div>
-		<div class="grid_8 tworow1"><label class="desc" for="Title">Last Name<em class="req" style="float: none;">*</em></label></div>
+		<div class="grid_8 tworow1"><label class="desc" for="Title">Last Name</label><em class="req">*</em></div>
 		<div class="clear"></div>
 		
 		<div class="grid_7 tworow2">
@@ -77,7 +77,7 @@
 		<div class="clear"></div>
 		
 		<div class="grid_7">
-			<appfuse:label styleClass="desc" key="student.admissionNumber"/><em class="req">*</em>
+			<label class="desc" for="admissionNumber">Admission Number</label><em class="req">*</em>
 		</div>
 		<div class="grid_9">
 			<input type="text" maxlength="255" value="<c:out value="${studentView.admissionNumber}"/>" class="text medium" name="admissionNumber" id="admissionNumber">
@@ -110,13 +110,13 @@
 		<div class="clear"></div>
 	
 		<div class="grid_7">
-			<appfuse:label styleClass="desc" key="student.joiningDate"/><em class="req">*</em>
+			<label class="desc" for="joiningDate">Joining Date</label><em class="req">*</em>
 		</div>
 		<div class="grid_9">
 			<input type="text" size="11" value="<fmt:formatDate pattern="dd/MM/yyyy" value="${studentView.joiningDate}" />" class="text small" name="joiningDate" id="joiningDate">
 			<img src="<c:url value='/images/iconCalendar.gif'/>" alt="" id="joiningDateDatePicker" class="calIcon"/>
 		</div>	
-		<div class="grid_7"><appfuse:label styleClass="desc" key="student.nationality"/><em class="req">*</em></div>	
+		<div class="grid_7"><label class="desc" for="nationality">Nationality</label><em class="req">*</em></div>	
 		<div class="grid_8">
 			<select class="text" name="nationality" id="nationality">
 				<option value=""> -Select One- </option>
@@ -142,7 +142,7 @@
 		<div class="grid_8"><input type="text" maxlength="255" value="" class="text medium" name="religion" id="religion"></div>
 		 -->
 		<div class="grid_7">
-			<appfuse:label styleClass="desc" key="student.studentId"/><em class="req">*</em>
+			<label class="desc" for="studentId">Student Id</label><em class="req">*</em>
 		</div>
 		<div class="grid_8">
 			<input type="text" maxlength="255" value="<c:out value="${studentView.studentId}"/>" class="text medium" name="studentId" id="studentId">
@@ -188,7 +188,7 @@
 		 -->
 		<!-- Mother Info End -->
 	</div>
-	<div id="tabs-2">
+	<div id="tabs-2" class="ui-tabs-hide hidden" >
 		<div class="grid_32"><label class="heading">Address</label></div>
 		<div class="clear"></div>
 		<div class="separator"></div>
@@ -247,8 +247,8 @@
     var courseGroupsJson = <c:out value="${course_groups_json}" escapeXml="false"/>;
     var coursesJson = <c:out value="${courses_json}" escapeXml="false"/>;
     
-    $.each(courseGroupsJson, function() {   
-    	$('#courseGroupId').append(new Option(this.value, this.id)); 
+    $.each(courseGroupsJson, function() {
+    	$('#courseGroupId').append('<option value="' + this.id + '" >' + this.value + '</option>');
     });
     
     $('#courseGroupId').val($('#courseGroupId').attr("defaultValue"));
