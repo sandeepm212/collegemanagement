@@ -2,16 +2,11 @@ package com.management.college.model;
 
 import java.io.Serializable;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 import javax.persistence.Transient;
@@ -98,10 +93,13 @@ public class Address extends BaseObject implements Serializable {
 	 */
 	private int					ownerEntityType;
 
+	private PersonName			personName;
+
 	/**
 	 * Default constructor - creates a new instance with no values set.
 	 */
 	public Address() {
+		personName = new PersonName();
 	}
 
 	@TableGenerator(name = "address_id_gen", table = "mgmt_id_table", pkColumnName = "table_name", valueColumnName = "next_id", initialValue = 1, allocationSize = 1)
@@ -114,7 +112,7 @@ public class Address extends BaseObject implements Serializable {
 	/**
 	 * @return ownerEntityId
 	 */
-	@Column(name = "owner_entity_id", nullable = false)
+	@Column(name = "owner_entity_id", nullable = false, updatable = false)
 	public long getOwnerEntityId() {
 		return ownerEntityId;
 	}
@@ -122,8 +120,8 @@ public class Address extends BaseObject implements Serializable {
 	/**
 	 * @return ownerEntityType
 	 */
-	@Column(name = "owner_entity_type", nullable = false)
-	public int getOwnerEntityTypeId() {
+	@Column(name = "owner_entity_type", nullable = false, updatable=false)
+	public int getOwnerEntityType() {
 		return ownerEntityType;
 	}
 
@@ -204,9 +202,14 @@ public class Address extends BaseObject implements Serializable {
 	 * 
 	 * @return the uniqueCode
 	 */
-	@Column(name = "unique_code", nullable = false)
+	@Column(name = "unique_code")
 	public String getUniqueCode() {
 		return this.uniqueCode;
+	}
+
+	@Transient
+	public PersonName getPersonName() {
+		return personName;
 	}
 
 	@Override
@@ -235,7 +238,7 @@ public class Address extends BaseObject implements Serializable {
 	 * 
 	 * @param ownerEntityType
 	 */
-	public void setOwnerEntityTypeId(final int ownerEntityType) {
+	public void setOwnerEntityType(final int ownerEntityType) {
 		this.ownerEntityType = ownerEntityType;
 	}
 
@@ -333,6 +336,10 @@ public class Address extends BaseObject implements Serializable {
 		this.uniqueCode = uniqueCode;
 	}
 
+	public void setPersonName(PersonName personName) {
+		this.personName = personName;
+	}
+
 	/**
 	 * Overridden equals method for object comparison. Compares based on
 	 * hashCode.
@@ -381,4 +388,5 @@ public class Address extends BaseObject implements Serializable {
 				.append("enabled", this.enabled).append("displayOrder", this.displayOrder)
 				.append("uniqueCode", this.uniqueCode).toString();
 	}
+
 }

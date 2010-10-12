@@ -15,57 +15,55 @@ import com.management.college.model.Phone;
 
 public class StudentView {
 
-	Long id;
+	Long			id;
 
-	String studentId;
+	String			studentId;
 
-	PersonName studentName;
+	PersonName		studentName;
 
-	PersonName fatherName;
+	PersonName		fatherName;
 
-	PersonName motherName;
+	PersonName		motherName;
 
-	int currentYear;
+	int				currentYear;
 
-	Date dateOfBirth;
+	Date			dateOfBirth;
 
-	String dateOfBirthStr;
+	String			dateOfBirthStr;
 
-	Date joiningDate;
+	Date			joiningDate;
 
-	String joiningDateStr;
+	String			joiningDateStr;
 
-	String registrationNumber;
+	String			registrationNumber;
 
-	String admissionNumber;
+	String			admissionNumber;
 
-	Long courseId;
+	Long			courseId;
 
-	String courseName;
+	String			courseName;
 
-	String courseCode;
+	String			courseCode;
 
-	Long courseGroupId;
+	Long			courseGroupId;
 
-	String courseGroupName;
+	String			courseGroupName;
 
-	String courseGroupCode;
+	String			courseGroupCode;
 
-	String gender;
+	String			gender;
 
-	Long nationality;
+	Long			nationality;
 
-	Long religion;
+	Long			religion;
 
-	Long bloodGroup;
+	Long			bloodGroup;
 
-	String identificationMarks;
+	String			identificationMarks;
 
-	List<Address> addresses;
+	List<Address>	addresses;
 
-	List<PersonName> addressNames;
-
-	List<Phone> phones;
+	List<Phone>		phones;
 
 	public StudentView() {
 		studentName = new PersonName();
@@ -74,8 +72,7 @@ public class StudentView {
 
 		addresses = ListUtils.lazyList(new ArrayList<Address>(5),
 				FactoryUtils.instantiateFactory(Address.class));
-		addressNames = ListUtils.lazyList(new ArrayList<PersonName>(5),
-				FactoryUtils.instantiateFactory(PersonName.class));
+
 		phones = ListUtils.lazyList(new ArrayList<Phone>(5),
 				FactoryUtils.instantiateFactory(Phone.class));
 	}
@@ -154,10 +151,6 @@ public class StudentView {
 
 	public String getDateOfBirthStr() {
 		return dateOfBirthStr;
-	}
-
-	public List<PersonName> getAddressNames() {
-		return addressNames;
 	}
 
 	public String getMotherFirstName() {
@@ -328,35 +321,23 @@ public class StudentView {
 		this.dateOfBirthStr = dateOfBirthStr;
 	}
 
-	public void setAddressNames(List<PersonName> addressNames) {
-		this.addressNames = addressNames;
-	}
-
 	/**
 	 * @see java.lang.Object#toString()
 	 */
 	public String toString() {
 		return new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE)
-				.append("addresses", this.addresses)
-				.append("gender", this.gender)
+				.append("addresses", this.addresses).append("gender", this.gender)
 				.append("studentId", this.studentId)
 				.append("courseGroupName", this.courseGroupName)
-				.append("courseName", this.courseName)
-				.append("motherName", this.motherName)
-				.append("religion", this.religion)
-				.append("joiningDateStr", this.joiningDateStr)
-				.append("nationality", this.nationality)
-				.append("phones", this.phones)
+				.append("courseName", this.courseName).append("motherName", this.motherName)
+				.append("religion", this.religion).append("joiningDateStr", this.joiningDateStr)
+				.append("nationality", this.nationality).append("phones", this.phones)
 				.append("courseGroupCode", this.courseGroupCode)
-				.append("dateOfBirth", this.dateOfBirth)
-				.append("courseCode", this.courseCode)
+				.append("dateOfBirth", this.dateOfBirth).append("courseCode", this.courseCode)
 				.append("registrationNumber", this.registrationNumber)
-				.append("studentName", this.studentName)
-				.append("fatherName", this.fatherName)
-				.append("courseId", this.courseId)
-				.append("admissionNumber", this.admissionNumber)
-				.append("bloodGroup", this.bloodGroup)
-				.append("currentYear", this.currentYear)
+				.append("studentName", this.studentName).append("fatherName", this.fatherName)
+				.append("courseId", this.courseId).append("admissionNumber", this.admissionNumber)
+				.append("bloodGroup", this.bloodGroup).append("currentYear", this.currentYear)
 				.append("joiningDate", this.joiningDate)
 				.append("identificationMarks", this.identificationMarks)
 				.append("courseGroupId", this.courseGroupId).toString();

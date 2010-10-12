@@ -142,15 +142,41 @@ public class StudentFormController extends BaseFormController {
 		}
 	}
 
-	private void saveContact(Long id, StudentView studentView) {
-		if (id != null && studentView != null) {
+	private void saveContact(Long studentId, StudentView studentView) {
+		if (studentId != null && studentView != null) {
 			List<Address> addresses = studentView.getAddresses();
-			List<PersonName> addressNames = studentView.getAddressNames();
-			
 			if (addresses != null && !addresses.isEmpty()) {
-				
+
+				for (Address address : addresses) {
+					address.setCreatedOn(new Date());
+					address.setUpdatedOn(new Date());
+
+					address.setOwnerEntityId(studentId);
+					address.setOwnerEntityType(AppConstants.ENTITY_TYPE_CORE_STUDENT);
+
+					addressManager.save(address);
+
+					PersonName personName = address.getPersonName();
+					personName.setOwnerEntityId(address.getId());
+					personName.setOwnerEntityType(AppConstants.ENTITY_TYPE_CONTACT_ADDRESS);
+
+					personName.setCreatedOn(new Date());
+					personName.setUpdatedOn(new Date());
+
+					personNameManager.save(personName);
+
+				}
 			}
 			List<Phone> phones = studentView.getPhones();
+			for (Phone phone : phones) {
+				phone.setCreatedOn(new Date());
+				phone.setUpdatedOn(new Date());
+
+				phone.setOwnerEntityId(studentId);
+				phone.setOwnerEntityType(AppConstants.ENTITY_TYPE_CORE_STUDENT);
+
+				phoneManager.save(phone);
+			}
 		}
 	}
 
