@@ -20,10 +20,10 @@ public class AddressDaoTest extends BaseDaoTestCase {
         address.setCreatedOn(new java.util.Date());
         address.setUpdatedOn(new java.util.Date());
         address.setAddressType(1L);
-        address.setDisplayOrder(160640339);
+        address.setDisplayOrder(1);
         address.setEnabled(Boolean.FALSE);
         address.setOwnerEntityId(7L);
-        address.setOwnerEntityTypeId(580980322);
+        address.setOwnerEntityType(5);
         address.setPrimaryAddress(Boolean.FALSE);
         address.setUniqueCode("FF");
 
@@ -45,5 +45,10 @@ public class AddressDaoTest extends BaseDaoTestCase {
             log.debug("Expected exception: " + e.getMessage());
             assertNotNull(e);
         }
+    }
+    
+    public void testGetAddressesByOwner() throws Exception {
+    	List<Address> addresses = addressDao.getAddressByOwner(6L, 3);
+    	System.out.println(addresses);
     }
 }
