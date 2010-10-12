@@ -81,7 +81,7 @@ public class Phone extends BaseObject implements Serializable {
 	 * one of the defined ENEITY_TYPE constants and is used in combination with
 	 * the entityId to retrieve this phone from persistence.
 	 */
-	private int ownerEntityTypeId;
+	private int ownerEntityType;
 
 	public static final int PHONE_ENTITY_SUB_TYPE_PHONE = 1;
 
@@ -158,7 +158,7 @@ public class Phone extends BaseObject implements Serializable {
 	/**
 	 * @return the OwnerEntityId
 	 */
-	@Column(name = "owner_entity_id", nullable = false)
+	@Column(name = "owner_entity_id", nullable = false, updatable = false)
 	public long getOwnerEntityId() {
 		return ownerEntityId;
 	}
@@ -166,9 +166,9 @@ public class Phone extends BaseObject implements Serializable {
 	/**
 	 * @return the ownerEntityType
 	 */
-	@Column(name = "owner_entity_type", nullable = false)
-	public int getOwnerEntityTypeId() {
-		return ownerEntityTypeId;
+	@Column(name = "owner_entity_type", nullable = false, updatable = false)
+	public int getOwnerEntityType() {
+		return ownerEntityType;
 	}
 
 	/**
@@ -248,8 +248,8 @@ public class Phone extends BaseObject implements Serializable {
 	 * @param phoneEntityType
 	 *            the ownerEntityType is to set
 	 */
-	public void setOwnerEntityTypeId(final int phoneEntityType) {
-		this.ownerEntityTypeId = phoneEntityType;
+	public void setOwnerEntityType(final int phoneEntityType) {
+		this.ownerEntityType = phoneEntityType;
 	}
 
 	/**
@@ -302,7 +302,7 @@ public class Phone extends BaseObject implements Serializable {
 				.append("displayOrder", this.displayOrder)
 				.append("entityType", this.getEntityType())
 				.append("entitySubType", this.entitySubType)
-				.append("ownerEntityTypeId", this.ownerEntityTypeId)
+				.append("ownerEntityType", this.ownerEntityType)
 				.append("ownerEntityId", this.ownerEntityId)
 				.append("dataType", this.dataType);
 
