@@ -2,4 +2,4 @@
 
 
 
-<c:redirect url="/mainMenu.html"/>  asdalkalsdk ---
+<c:redirect url="/mainMenu.html"/>  =====
