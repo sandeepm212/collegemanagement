@@ -2,4 +2,4 @@
 
 
 
-<c:redirect url="/mainMenu.html"/>  === == === ===
+<c:redirect url="/mainMenu.html"/>  === == === === 
